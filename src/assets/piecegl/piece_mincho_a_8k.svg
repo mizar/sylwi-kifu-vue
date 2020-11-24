@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="8192" height="8192" viewBox="0 0 30000 30000">
+  <defs>
+    <text id="ou" transform="matrix(6400 0 0 6700 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">王</text>
+    <text id="gy" transform="matrix(6400 0 0 6700 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">玉</text>
+    <text id="fu" transform="matrix(4700 0 0 5600 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">歩</text>
+    <text id="to" transform="matrix(4700 0 0 5600 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">と</text>
+    <text id="ky" transform="matrix(5000 0 0 5800 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">香</text>
+    <g id="ny">
+      <text transform="matrix(4300 0 0 3500 5000 5450)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">成</text>
+      <text transform="matrix(4800 0 0 3500 5000 8650)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">香</text>
+    </g>
+    <text id="ke" transform="matrix(5400 0 0 6000 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">桂</text>
+    <g id="nk">
+      <text transform="matrix(4700 0 0 3500 5000 5450)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">成</text>
+      <text transform="matrix(5200 0 0 3500 5000 8650)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">桂</text>
+    </g>
+    <text id="gi" transform="matrix(5600 0 0 6300 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">銀</text>
+    <g id="ng">
+      <text transform="matrix(4900 0 0 3600 5000 5250)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">成</text>
+      <text transform="matrix(5400 0 0 3600 5000 8650)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">銀</text>
+    </g>
+    <text id="ki" transform="matrix(5600 0 0 6300 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">金</text>
+    <text id="ka" transform="matrix(6200 0 0 6600 5200 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">角</text>
+    <text id="um" transform="matrix(6000 0 0 6600 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">馬</text>
+    <text id="hi" transform="matrix(5800 0 0 6600 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">飛</text>
+    <text id="ry" transform="matrix(5800 0 0 6600 5000 8100)" font-size="1" font-family="'Noto Serif CJK JP','Noto Sans JP','Yu Gothic',YuGothic,Osaka,Meiryo,'MS Gothic',sans-serif" font-weight="700" stroke="none" stroke-width="0" text-anchor="middle">竜</text>
+  </defs>
+  <g>
+    <use xlink:href="#ou" transform="matrix(.55 0 0 .55 -250 4510)"/>
+    <use xlink:href="#gy" transform="matrix(.55 0 0 .55 9750 4510)"/>
+    <use xlink:href="#fu" transform="matrix(.55 0 0 .55 19750 4510)"/>
+    <use xlink:href="#to" transform="matrix(.55 0 0 .55 24750 4510)"/>
+    <use xlink:href="#ky" transform="matrix(.55 0 0 .55 -250 14510)"/>
+    <use xlink:href="#ny" transform="matrix(.55 0 0 .55 4750 14510)"/>
+    <use xlink:href="#ke" transform="matrix(.55 0 0 .55 9750 14510)"/>
+    <use xlink:href="#nk" transform="matrix(.55 0 0 .55 14750 14510)"/>
+    <use xlink:href="#gi" transform="matrix(.55 0 0 .55 19750 14510)"/>
+    <use xlink:href="#ng" transform="matrix(.55 0 0 .55 24750 14510)"/>
+    <use xlink:href="#ki" transform="matrix(.55 0 0 .55 -250 24510)"/>
+    <use xlink:href="#ka" transform="matrix(.55 0 0 .55 9750 24510)"/>
+    <use xlink:href="#um" transform="matrix(.55 0 0 .55 14750 24510)"/>
+    <use xlink:href="#hi" transform="matrix(.55 0 0 .55 19750 24510)"/>
+    <use xlink:href="#ry" transform="matrix(.55 0 0 .55 24750 24510)"/>
+  </g>
+  <path transform="scale(100)" stroke="#000" stroke-width=".5" fill="none" d="
+M24,6.13L24,13.87L7.03,14.28L7.03,5.72Z
+M26,6.13L26,13.87L42.97,14.28L42.97,5.72Z
+M1.35,21.99L1.35,38.01L48.65,38.01L48.65,21.99Z
+M51,1.99L51,18.01L99,14.28L99,5.72Z
+M51,21.99L51,38.01L99,34.28L99,25.72Z
+M1.35,99L48.65,99L41.14,51.44L25,46.18L8.86,51.44Z
+M51.35,99L98.65,99L91.14,51.44L75,46.18L58.86,51.44Z
+M124,6.13L124,13.87L107.03,14.28L107.03,5.72Z
+M126,6.13L126,13.87L142.97,14.28L142.97,5.72Z
+M101.35,21.99L101.35,38.01L148.65,38.01L148.65,21.99Z
+M151,1.99L151,18.01L199,14.28L199,5.72Z
+M151,21.99L151,38.01L199,34.28L199,25.72Z
+M101.35,99L148.65,99L141.14,51.44L125,46.18L108.86,51.44Z
+M151.35,99L198.65,99L191.14,51.44L175,46.18L158.86,51.44Z
+M224,7.13L224,12.87L211.29,13.18L211.29,6.82Z
+M226,7.13L226,12.87L238.71,13.18L238.71,6.82Z
+M206.46,23.62L206.46,36.38L243.54,36.38L243.54,23.62Z
+M251,3.62L251,16.38L292.26,13.18L292.26,6.82Z
+M251,23.62L251,36.38L292.26,33.18L292.26,26.82Z
+M206.46,99L243.54,99L237.09,58.13L225,54.19L212.91,58.13Z
+M256.46,99L293.54,99L287.09,58.13L275,54.19L262.91,58.13Z
+M24,107.04L24,112.96L10.65,113.29L10.65,106.71Z
+M26,107.04L26,112.96L39.35,113.29L39.35,106.71Z
+M5.63,123.39L5.63,136.61L44.37,136.61L44.37,123.39Z
+M51,103.39L51,116.61L93.67,113.29L93.67,106.71Z
+M51,123.39L51,136.61L93.67,133.29L93.67,126.71Z
+M5.63,199L44.37,199L37.69,156.72L25,152.59L12.31,156.72Z
+M55.63,199L94.37,199L87.69,156.72L75,152.59L62.31,156.72Z
+M124,106.94L124,113.06L109.09,113.42L109.09,106.58Z
+M126,106.94L126,113.06L140.91,113.42L140.91,106.58Z
+M103.97,123.17L103.97,136.83L146.03,136.83L146.03,123.17Z
+M151,103.17L151,116.83L194.8,113.42L194.8,106.58Z
+M151,123.17L151,136.83L194.8,133.42L194.8,126.58Z
+M103.97,199L146.03,199L139.18,155.61L125,150.99L110.82,155.61Z
+M153.97,199L196.03,199L189.18,155.61L175,150.99L160.82,155.61Z
+M224,106.65L224,113.35L208.28,113.73L208.28,106.27Z
+M226,106.65L226,113.35L241.72,113.73L241.72,106.27Z
+M202.98,122.76L202.98,137.24L247.02,137.24L247.02,122.76Z
+M251,102.76L251,117.24L296.16,113.73L296.16,106.27Z
+M251,122.76L251,137.24L296.16,133.73L296.16,126.27Z
+M202.98,199L247.02,199L239.95,154.26L225,149.39L210.05,154.26Z
+M252.98,199L297.02,199L289.95,154.26L275,149.39L260.05,154.26Z
+M24,206.65L24,213.35L8.28,213.73L8.28,206.27Z
+M26,206.65L26,213.35L41.72,213.73L41.72,206.27Z
+M2.98,222.76L2.98,237.24L47.02,237.24L47.02,222.76Z
+M51,202.76L51,217.24L96.16,213.73L96.16,206.27Z
+M51,222.76L51,237.24L96.16,233.73L96.16,226.27Z
+M2.98,299L47.02,299L39.95,254.26L25,249.39L10.05,254.26Z
+M52.98,299L97.02,299L89.95,254.26L75,249.39L60.05,254.26Z
+M124,206.36L124,213.64L107.67,214.04L107.67,205.96Z
+M126,206.36L126,213.64L142.33,214.04L142.33,205.96Z
+M102.18,222.34L102.18,237.66L147.82,237.66L147.82,222.34Z
+M151,202.34L151,217.66L197.58,214.04L197.58,205.96Z
+M151,222.34L151,237.66L197.58,234.04L197.58,225.96Z
+M102.18,299L147.82,299L140.53,252.85L125,247.79L109.47,252.85Z
+M152.18,299L197.82,299L190.53,252.85L175,247.79L159.47,252.85Z
+M224,206.36L224,213.64L207.67,214.04L207.67,205.96Z
+M226,206.36L226,213.64L242.33,214.04L242.33,205.96Z
+M202.18,222.34L202.18,237.66L247.82,237.66L247.82,222.34Z
+M251,202.34L251,217.66L297.58,214.04L297.58,205.96Z
+M251,222.34L251,237.66L297.58,234.04L297.58,225.96Z
+M202.18,299L247.82,299L240.53,252.85L225,247.79L209.47,252.85Z
+M252.18,299L297.82,299L290.53,252.85L275,247.79L259.47,252.85Z
+M0 0V300
+M100 0V300
+M200 0V300
+M300 0V300
+M0 0H300
+M0 100H300
+M0 200H300
+M0 300H300
+"/>
+</svg>
