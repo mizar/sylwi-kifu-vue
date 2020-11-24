@@ -1,0 +1,2 @@
+piece_*.png filter=lfs diff=lfs merge=lfs -text
+*.hdr filter=lfs diff=lfs merge=lfs -text

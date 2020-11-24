@@ -1,4 +1,6 @@
-# try-vue-next
+# sylwi-kifu-vue
+
+https://sylwi.mzr.jp
 
 ## Project setup
 ```

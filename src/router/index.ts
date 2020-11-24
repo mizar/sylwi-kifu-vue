@@ -1,5 +1,12 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "@/views/Home.vue";
+import TournamentGL from "@/views/TournamentGL.vue";
+import KifuSingleGL from "@/views/KifuSingleGL.vue";
+import Tournament from "@/views/Tournament.vue";
+import KifuSingle from "@/views/KifuSingle.vue";
+import KifuMulti from "@/views/KifuMulti.vue";
+import About from "@/views/About.vue";
+import Test from "@/views/Test.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,11 +17,69 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/about",
     name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    component: About,
+  },
+  {
+    path: "/test",
+    name: "Test",
+    component: Test,
+  },
+  {
+    path: "/3d/:tournament([\\w.+-]+)",
+    name: "TournamentGL",
+    component: TournamentGL,
+    props: (route) => ({
+      tournament: route.params.tournament,
+      limitTimeDur: +(route.query.lt || Infinity),
+      limitNumber: +(route.query.ln || 20),
+      hideTags: route.query.tags === "0" || route.query.s === "1",
+      hideGraph: route.query.graph === "0" || route.query.s === "1",
+      hideTools: route.query.tools === "0",
+      hideComments: route.query.comments === "0",
+      gameNameInclude: route.query.name,
+    }),
+  },
+  {
+    path: "/3d/:tournament([\\w.+-]+)/:gameid([\\w.+-]+\\+\\d+)/:ply(\\d+)?",
+    name: "KifuSingleGL",
+    component: KifuSingleGL,
+    props: true,
+  },
+  {
+    path: "/:tournament([\\w.+-]+)",
+    name: "Tournament",
+    component: Tournament,
+    props: (route) => ({
+      tournament: route.params.tournament,
+      limitTimeDur: +(route.query.lt || Infinity),
+      limitNumber: +(route.query.ln || 20),
+      hideTags: route.query.tags === "0" || route.query.s === "1",
+      hideGraph: route.query.graph === "0" || route.query.s === "1",
+      hideTools: route.query.tools === "0",
+      hideComments: route.query.comments === "0",
+      gameNameInclude: route.query.name,
+    }),
+  },
+  {
+    path: "/:tournament([\\w.+-]+)/multi",
+    name: "KifuMulti",
+    component: KifuMulti,
+    props: (route) => ({
+      tournament: route.params.tournament,
+      limitTimeDur: +(route.query.lt || Infinity),
+      limitNumber: +(route.query.ln || Infinity),
+      hideTags: route.query.tags === "0" || route.query.s === "1",
+      hideGraph: route.query.graph === "0" || route.query.s === "1",
+      hideTools: route.query.tools === "0",
+      hideComments: route.query.comments === "0",
+      gameNameInclude: route.query.name,
+    }),
+  },
+  {
+    path: "/:tournament([\\w.+-]+)/:gameid([\\w.+-]+\\+\\d+)/:ply(\\d+)?",
+    name: "KifuSingle",
+    component: KifuSingle,
+    props: true,
   },
 ];
 

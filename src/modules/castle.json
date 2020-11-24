@@ -1,0 +1,1189 @@
+[
+  {
+    "id": "HIRATE",
+    "name": {
+      "ja_JP": "平手"
+    },
+    "pieces": [
+      "K*5i",
+      "G*6i",
+      "G*4i",
+      "S*7i",
+      "S*3i",
+      "N*8i",
+      "N*2i",
+      "L*9i",
+      "L*1i",
+      "B*8h",
+      "R*2h",
+      "P*5g",
+      "P*6g",
+      "P*4g",
+      "P*7g",
+      "P*3g",
+      "P*8g",
+      "P*2g",
+      "P*9g",
+      "P*1g",
+      "k*5a",
+      "g*4a",
+      "g*6a",
+      "s*3a",
+      "s*7a",
+      "n*2a",
+      "n*8a",
+      "l*1a",
+      "l*9a",
+      "b*2b",
+      "r*8b",
+      "p*5c",
+      "p*4c",
+      "p*6c",
+      "p*3c",
+      "p*7c",
+      "p*2c",
+      "p*8c",
+      "p*1c",
+      "p*9c"
+    ],
+    "hand_exclude": [
+      "K",
+      "R",
+      "B",
+      "G",
+      "S",
+      "N",
+      "L",
+      "P",
+      "k",
+      "r",
+      "b",
+      "g",
+      "s",
+      "n",
+      "l",
+      "p"
+    ],
+    "tesuu_max": 0,
+    "hide": true,
+    "noturn": true
+  },
+  {
+    "id": "KAKUGAWARI",
+    "name": {
+      "ja_JP": "角換わり"
+    },
+    "hand": [
+      "B",
+      "b"
+    ],
+    "tesuu_max": 20,
+    "noturn": true
+  },
+  {
+    "id": "SENTE_HISHASAKI_FUKOUKAN",
+    "name": {
+      "ja_JP": "先手飛車先歩交換"
+    },
+    "moves": [
+      "R*2h2d"
+    ],
+    "capture": [
+      "p"
+    ],
+    "tesuu_max": 20,
+    "hide": true,
+    "noturn": true
+  },
+  {
+    "id": "GOTE_HISHASAKI_FUKOUKAN",
+    "name": {
+      "ja_JP": "後手飛車先歩交換"
+    },
+    "moves": [
+      "r*8b8f"
+    ],
+    "capture": [
+      "P"
+    ],
+    "tesuu_max": 20,
+    "hide": true,
+    "noturn": true
+  },
+  {
+    "id": "SENTE_YOKOFU",
+    "name": {
+      "ja_JP": "先手横歩"
+    },
+    "moves": [
+      "R*2d3d"
+    ],
+    "capture": [
+      "p"
+    ],
+    "tags_disable": [
+      "AIGAKARI"
+    ],
+    "tesuu_max": 20,
+    "noturn": true
+  },
+  {
+    "id": "GOTE_YOKOFU",
+    "name": {
+      "ja_JP": "後手横歩"
+    },
+    "moves": [
+      "r*8f7f"
+    ],
+    "capture": [
+      "P"
+    ],
+    "tags_disable": [
+      "AIGAKARI"
+    ],
+    "tesuu_max": 20,
+    "noturn": true
+  },
+  {
+    "id": "AIGAKARI",
+    "name": {
+      "ja_JP": "相掛かり"
+    },
+    "tags_required": [
+      "SENTE_HISHASAKI_FUKOUKAN",
+      "GOTE_HISHASAKI_FUKOUKAN"
+    ],
+    "tags_exclude": [
+      "SENTE_YOKOFU",
+      "GOTE_YOKOFU"
+    ],
+    "tesuu_max": 64,
+    "noturn": true
+  },
+  {
+    "id": "MUKAIBISHA",
+    "name": {
+      "ja_JP": "向かい飛車"
+    },
+    "moves": [
+      "R*2h8h"
+    ],
+    "tesuu_max": 20
+  },
+  {
+    "id": "SANGEN",
+    "name": {
+      "ja_JP": "三間飛車"
+    },
+    "moves": [
+      "R*2h7h"
+    ],
+    "tesuu_max": 20
+  },
+  {
+    "id": "SHIKEN",
+    "name": {
+      "ja_JP": "四間飛車"
+    },
+    "moves": [
+      "R*2h6h"
+    ],
+    "tesuu_max": 20
+  },
+  {
+    "id": "NAKABISHA",
+    "name": {
+      "ja_JP": "中飛車"
+    },
+    "moves": [
+      "R*2h5h"
+    ],
+    "tesuu_max": 20
+  },
+  {
+    "id": "MIGISHIKEN",
+    "name": {
+      "ja_JP": "右四間飛車"
+    },
+    "moves": [
+      "R*2h4h"
+    ],
+    "tesuu_max": 20
+  },
+  {
+    "id": "SODEBISHA",
+    "name": {
+      "ja_JP": "袖飛車"
+    },
+    "moves": [
+      "R*2h3h"
+    ],
+    "tesuu_max": 20
+  },
+  {
+    "id": "HON_MINO",
+    "name": {
+      "ja_JP": "本美濃囲い"
+    },
+    "pieces": [
+      "K*2h",
+      "S*3h",
+      "G*4i",
+      "G*5h"
+    ],
+    "tags_disable": [
+      "KATA_MINO"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "TAKA_MINO",
+    "name": {
+      "ja_JP": "高美濃囲い"
+    },
+    "pieces": [
+      "K*2h",
+      "S*3h",
+      "G*4i",
+      "G*4g"
+    ],
+    "tags_disable": [
+      "KATA_MINO"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "GIN_MINO",
+    "name": {
+      "ja_JP": "銀美濃囲い"
+    },
+    "pieces": [
+      "K*2h",
+      "S*3h",
+      "G*4i",
+      "S*5h"
+    ],
+    "tags_disable": [
+      "KATA_MINO"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KIN_MINO",
+    "name": {
+      "ja_JP": "金美濃囲い"
+    },
+    "pieces": [
+      "K*2h",
+      "G*3h",
+      "S*4h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "DIAMOND_MINO",
+    "name": {
+      "ja_JP": "ダイアモンド美濃"
+    },
+    "pieces": [
+      "K*2h",
+      "S*3h",
+      "G*4i",
+      "G*5h",
+      "S*4g"
+    ],
+    "tags_disable": [
+      "KATA_MINO"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KIMURA_MINO",
+    "name": {
+      "ja_JP": "木村美濃"
+    },
+    "pieces": [
+      "K*2h",
+      "G*3h",
+      "S*4g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "HIRAME",
+    "name": {
+      "ja_JP": "ヒラメ"
+    },
+    "pieces": [
+      "K*2h",
+      "S*3h",
+      "G*4i",
+      "G*5i"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KATA_MINO",
+    "name": {
+      "ja_JP": "片美濃囲い"
+    },
+    "pieces": [
+      "K*2h",
+      "S*3h",
+      "G*4i"
+    ],
+    "tags_exclude": [
+      "HON_MINO",
+      "TAKA_MINO",
+      "GIN_MINO",
+      "DIAMOND_MINO"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FURI_GINKAN",
+    "name": {
+      "ja_JP": "振り飛車銀冠"
+    },
+    "pieces": [
+      "K*2h",
+      "S*2g",
+      "G*3h",
+      "G*4g"
+    ],
+    "tags_disable": [
+      "FURI_KATA_GINKAN"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FURI_GINKAN",
+    "name": {
+      "ja_JP": "振り飛車銀冠"
+    },
+    "pieces": [
+      "G*3h",
+      "S*2g"
+    ],
+    "tags_disable": [
+      "FURI_KATA_GINKAN"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FURI_KATA_GINKAN",
+    "name": {
+      "ja_JP": "振り飛車片銀冠"
+    },
+    "pieces": [
+      "K*2h",
+      "S*2g",
+      "G*3h"
+    ],
+    "tags_exclude": [
+      "FURI_GINKAN"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FURI_GINKAN_ANAGUMA",
+    "name": {
+      "ja_JP": "振り飛車銀冠穴熊"
+    },
+    "pieces": [
+      "K*1i",
+      "L*1h",
+      "N*2i",
+      "S*2g",
+      "G*3h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FURI_KATA_GINKAN",
+    "name": {
+      "ja_JP": "振り飛車片銀冠"
+    },
+    "pieces": [
+      "K*2h",
+      "S*2g",
+      "G*3h"
+    ],
+    "tags_exclude": [
+      "FURI_GINKAN",
+      "FURI_GINKAN_ANAGUMA"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FURI_ANAGUMA",
+    "name": {
+      "ja_JP": "振り飛車穴熊"
+    },
+    "pieces": [
+      "K*1i",
+      "L*1h",
+      "N*2i"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "HAYAGAKOI",
+    "name": {
+      "ja_JP": "早囲い"
+    },
+    "pieces": [
+      "K*3h",
+      "S*4h",
+      "G*4i"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KINMUSOU",
+    "name": {
+      "ja_JP": "金無双"
+    },
+    "pieces": [
+      "K*3h",
+      "G*5h",
+      "G*4h",
+      "S*2h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KINMUSOU",
+    "name": {
+      "ja_JP": "金無双"
+    },
+    "pieces": [
+      "K*3h",
+      "G*5h",
+      "G*4h",
+      "S*3i"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "YAGURA",
+    "name": {
+      "ja_JP": "矢倉"
+    },
+    "pieces": [
+      "G*7h",
+      "S*7g"
+    ],
+    "hand_exclude": [
+      "B"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "YAGURA",
+    "name": {
+      "ja_JP": "矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
+      "S*7g",
+      "G*6g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KANI",
+    "name": {
+      "ja_JP": "カニ囲い"
+    },
+    "pieces": [
+      "K*6i",
+      "G*7h",
+      "S*6h",
+      "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "GINTACHI_YAGURA",
+    "name": {
+      "ja_JP": "銀立ち矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
+      "G*6g",
+      "S*7f"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "GIN_YAGURA",
+    "name": {
+      "ja_JP": "銀矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
+      "S*7g",
+      "S*6g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "BONANZA",
+    "name": {
+      "ja_JP": "ボナンザ囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "S*7g",
+      "G*6h",
+      "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "SOU_YAGURA",
+    "name": {
+      "ja_JP": "総矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
+      "S*7g",
+      "G*6g",
+      "S*5g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "HISHI_YAGURA",
+    "name": {
+      "ja_JP": "菱矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
+      "S*7g",
+      "G*6g",
+      "S*6f"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KIKUSUI_YAGURA",
+    "name": {
+      "ja_JP": "菊水矢倉"
+    },
+    "pieces": [
+      "K*8i",
+      "G*7h",
+      "S*8h",
+      "G*6g",
+      "N*7g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "HEKOMI_YAGURA",
+    "name": {
+      "ja_JP": "凹み矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
+      "S*7g",
+      "G*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KATA_YAGURA",
+    "name": {
+      "ja_JP": "片矢倉"
+    },
+    "pieces": [
+      "K*7h",
+      "S*7g",
+      "G*6g",
+      "G*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "GINKAN",
+    "name": {
+      "ja_JP": "銀冠"
+    },
+    "pieces": [
+      "K*8h",
+      "S*8g",
+      "G*7h",
+      "G*6g"
+    ],
+    "tags_disable": [
+      "KATA_GINKAN"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "GINKAN_ANAGUMA",
+    "name": {
+      "ja_JP": "銀冠穴熊"
+    },
+    "pieces": [
+      "K*9i",
+      "L*9h",
+      "N*8i",
+      "S*8g",
+      "G*7h"
+    ],
+    "tags_disable": [
+      "KATA_GINKAN"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KATA_GINKAN",
+    "name": {
+      "ja_JP": "片銀冠"
+    },
+    "pieces": [
+      "K*8h",
+      "S*8g",
+      "G*7h"
+    ],
+    "tags_exclude": [
+      "GINKAN",
+      "GINKAN_ANAGUMA"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KATA_GINKAN",
+    "name": {
+      "ja_JP": "片銀冠"
+    },
+    "pieces": [
+      "K*8h",
+      "S*8g",
+      "G*7h"
+    ],
+    "tags_exclude": [
+      "GINKAN",
+      "GINKAN_ANAGUMA"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "ANAGUMA",
+    "name": {
+      "ja_JP": "穴熊"
+    },
+    "pieces": [
+      "K*9i",
+      "L*9h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "MATSUO_ANAGUMA",
+    "name": {
+      "ja_JP": "松尾流穴熊"
+    },
+    "pieces": [
+      "K*9i",
+      "L*9h",
+      "N*8i",
+      "S*8h",
+      "S*7i",
+      "G*7h",
+      "G*6g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "BIG4",
+    "name": {
+      "ja_JP": "ビッグ４"
+    },
+    "pieces": [
+      "K*9i",
+      "L*9h",
+      "N*8i",
+      "G*8h",
+      "G*7h",
+      "S*8g",
+      "S*7g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "MILLENNIUM",
+    "name": {
+      "ja_JP": "ミレニアム"
+    },
+    "pieces": [
+      "K*8i",
+      "N*7g",
+      "S*8h",
+      "G*7i",
+      "G*7h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FUNAGAKOI",
+    "name": {
+      "ja_JP": "船囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "S*7i",
+      "G*6i",
+      "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "HAKOIRI_MUSUME",
+    "name": {
+      "ja_JP": "箱入り娘"
+    },
+    "pieces": [
+      "K*7h",
+      "S*7i",
+      "G*6i",
+      "G*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "CEMENT",
+    "name": {
+      "ja_JP": "セメント囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "S*6g",
+      "S*5g",
+      "G*6h",
+      "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "HIDARI_MINO",
+    "name": {
+      "ja_JP": "左美濃"
+    },
+    "pieces": [
+      "K*8h",
+      "S*7h",
+      "G*6i"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "TENSHUKAKU_MINO",
+    "name": {
+      "ja_JP": "天守閣美濃"
+    },
+    "pieces": [
+      "K*8g",
+      "B*8h",
+      "S*7h",
+      "G*6i",
+      "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "NIMAIGIN_GANGI",
+    "name": {
+      "ja_JP": "二枚銀雁木"
+    },
+    "pieces": [
+      "G*7h",
+      "S*6g",
+      "S*5g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "TUNOGIN_GANGI",
+    "name": {
+      "ja_JP": "ツノ銀雁木"
+    },
+    "pieces": [
+      "G*7h",
+      "G*5h",
+      "S*6g",
+      "S*4g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "ELMO",
+    "name": {
+      "ja_JP": "elmo囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "K*5h",
+      "G*7i",
+      "S*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "URESHINO",
+    "name": {
+      "ja_JP": "嬉野流"
+    },
+    "pieces": [
+      "S*6h",
+      "B*7i"
+    ],
+    "tesuu_max": 4
+  },
+  {
+    "id": "SHIN_URESHINO",
+    "name": {
+      "ja_JP": "新嬉野流"
+    },
+    "pieces": [
+      "S*5g",
+      "P*5f"
+    ],
+    "tesuu_max": 6
+  },
+  {
+    "id": "NAKAZUMAI",
+    "name": {
+      "ja_JP": "中住まい"
+    },
+    "pieces": [
+      "K*5h",
+      "G*3h",
+      "G*7h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "NAKAHARA",
+    "name": {
+      "ja_JP": "中原囲い"
+    },
+    "pieces": [
+      "K*6i",
+      "G*5i",
+      "S*4h",
+      "G*7h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "YONENAGAGYOKU",
+    "name": {
+      "ja_JP": "米長玉"
+    },
+    "pieces": [
+      "K*9h",
+      "L*9i",
+      "S*8g",
+      "G*7h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KUSHIKATSU",
+    "name": {
+      "ja_JP": "串カツ囲い"
+    },
+    "pieces": [
+      "K*9h",
+      "L*9i",
+      "S*8h",
+      "G*7i",
+      "G*7h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KAZAGURUMA",
+    "name": {
+      "ja_JP": "風車"
+    },
+    "pieces": [
+      "N*7g",
+      "S*6g",
+      "G*7h",
+      "N*3g",
+      "S*4g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "ICHIGO",
+    "name": {
+      "ja_JP": "イチゴ囲い"
+    },
+    "pieces": [
+      "K*6h",
+      "G*7h",
+      "G*5h",
+      "S*7i"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "MUTEKI",
+    "name": {
+      "ja_JP": "無敵囲い"
+    },
+    "pieces": [
+      "K*5i",
+      "G*6i",
+      "G*4i",
+      "S*6h",
+      "S*4h",
+      "R*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "HAYAKURIGIN",
+    "name": {
+      "ja_JP": "早繰り銀"
+    },
+    "pieces": [
+      "S*4f"
+    ],
+    "tesuu_max": 30
+  },
+  {
+    "id": "KOSHIKAKEGIN",
+    "name": {
+      "ja_JP": "腰掛け銀"
+    },
+    "pieces": [
+      "S*5f"
+    ],
+    "tesuu_max": 30
+  },
+  {
+    "id": "BOUGIN",
+    "name": {
+      "ja_JP": "棒銀"
+    },
+    "pieces": [
+      "S*2f"
+    ],
+    "tesuu_max": 30
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*1c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*2c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*3c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*4c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*5c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*6c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*7c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*8c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "NYUUGYOKU",
+    "name": {
+      "ja_JP": "入玉"
+    },
+    "pieces": [
+      "K*9c"
+    ],
+    "tesuu_max": 1000000000
+  },
+  {
+    "id": "AI_NYUUGYOKU",
+    "name": {
+      "ja_JP": "相入玉"
+    },
+    "tags_required": [
+      "SENTE_NYUUGYOKU",
+      "GOTE_NYUUGYOKU"
+    ],
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_CHUDAN",
+    "name": {
+      "ja_JP": "中断",
+      "en_US": "CHUDAN"
+    },
+    "special": "CHUDAN",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_TORYO",
+    "name": {
+      "ja_JP": "投了",
+      "en_US": "TORYO"
+    },
+    "special": "TORYO",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_JISHOGI",
+    "name": {
+      "ja_JP": "持将棋",
+      "en_US": "JISHOGI"
+    },
+    "special": "JISHOGI",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_SENNICHITE",
+    "name": {
+      "ja_JP": "千日手",
+      "en_US": "SENNICHITE"
+    },
+    "special": "SENNICHITE",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_TSUMI",
+    "name": {
+      "ja_JP": "詰み",
+      "en_US": "TSUMI"
+    },
+    "special": "TSUMI",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_FUZUMI",
+    "name": {
+      "ja_JP": "不詰",
+      "en_US": "FUZUMI"
+    },
+    "special": "FUZUMI",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_TIME_UP",
+    "name": {
+      "ja_JP": "切れ負け",
+      "en_US": "TIME_UP"
+    },
+    "special": "TIME_UP",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_ILLEGAL_ACTION",
+    "name": {
+      "ja_JP": "反則行為",
+      "en_US": "ILLEGAL_ACTION"
+    },
+    "special": "ILLEGAL_ACTION",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_ILLEGAL_MOVE",
+    "name": {
+      "ja_JP": "反則手",
+      "en_US": "ILLEGAL_MOVE"
+    },
+    "special": "ILLEGAL_MOVE",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_KACHI",
+    "name": {
+      "ja_JP": "勝ち宣言",
+      "en_US": "KACHI"
+    },
+    "special": "KACHI",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  }
+]
