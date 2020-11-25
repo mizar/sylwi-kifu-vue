@@ -1,7 +1,7 @@
 import { Piece } from "shogi.js";
 import { JKFPlayer } from "json-kifu-format";
 
-const turn_readable = (p: string): string => {
+export const turn_readable = (p: string): string => {
   switch (p) {
     case "P":
     case "+P":
@@ -42,7 +42,7 @@ const turn_readable = (p: string): string => {
   }
 };
 
-const piece_readable = (p: string): string => {
+export const piece_readable = (p: string): string => {
   switch (p.toLowerCase()) {
     case "p":
       return "歩";
@@ -85,7 +85,7 @@ const piece_readable = (p: string): string => {
   }
 };
 
-const sq_readable = (sq: string): string =>
+export const sq_readable = (sq: string): string =>
   `${
     ({
       "1": "１",
@@ -112,8 +112,7 @@ const sq_readable = (sq: string): string =>
     } as { [rank: string]: string })[sq.substring(1, 2)]
   }`;
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const castleOrgData = require("./castle.json") as {
+export type CastleOrgEntryType = {
   id: string; // タグ管理名
   name: {
     ja_JP: string; // 日本語名
@@ -132,29 +131,55 @@ const castleOrgData = require("./castle.json") as {
   tesuu_max: number; // 最大手数条件
   hide?: boolean; // デフォルト非表示
   noturn?: boolean; // (先/後)手番拡張
-}[];
-const castle = castleOrgData
-  .reduce<
-    {
-      id: string; // タグ管理名
-      name: {
-        ja_JP: string; // 日本語名
-        en_US: string; // 英語名
-      };
-      pieces?: string[]; // 駒リスト(AND条件)
-      moves?: string[]; // 動作リスト(OR条件)
-      capture?: string[]; // 捕獲駒種(OR条件)
-      hand?: string[]; // 持駒種リスト(AND条件)
-      hand_exclude?: string[]; // 持駒除外種リスト(NOT OR条件)
-      special?: string; // 特殊(投了・千日手など)
-      tags_required?: string[]; // 必須タグリスト(AND条件)
-      tags_exclude?: string[]; // 除外タグリスト(NOT OR条件)
-      tags_disable?: string[]; // 成立時非表示化タグリスト
-      tesuu_min?: number; // 最小手数条件
-      tesuu_max: number; // 最大手数条件
-      hide?: boolean; // デフォルト非表示
-    }[]
-  >((r, e) => {
+};
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+export const castleOrgData = require("@/assets/castle/castle.json") as CastleOrgEntryType[];
+
+export type CastleEntryType = {
+  id: string; // タグ管理名
+  name: {
+    ja_JP: string; // 日本語名
+    en_US: string; // 英語名
+  };
+  pieces?: string[]; // 駒リスト(AND条件)
+  moves?: string[]; // 動作リスト(OR条件)
+  capture?: string[]; // 捕獲駒種(OR条件)
+  hand?: string[]; // 持駒種リスト(AND条件)
+  hand_exclude?: string[]; // 持駒除外種リスト(NOT OR条件)
+  special?: string; // 特殊(投了・千日手など)
+  tags_required?: string[]; // 必須タグリスト(AND条件)
+  tags_exclude?: string[]; // 除外タグリスト(NOT OR条件)
+  tags_disable?: string[]; // 成立時非表示化タグリスト
+  tesuu_min?: number; // 最小手数条件
+  tesuu_max: number; // 最大手数条件
+  hide?: boolean; // デフォルト非表示
+};
+export const conv_readable_pieces = (p: string): string => {
+  const _m = p.match(/^(\+?[_PLNSGBRKplnsgbrk])\*([1-9][a-i])$/);
+  return _m
+    ? `${turn_readable(_m[1])}${sq_readable(_m[2])}${piece_readable(_m[1])}`
+    : "";
+};
+export const conv_readable_hand = (p: string): string => {
+  const _m = p.match(/^(\+?[PLNSGBRKplnsgbrk])$/);
+  return _m ? `${turn_readable(_m[1])}${piece_readable(_m[1])}` : "";
+};
+export const conv_readable_moves = (m: string): string => {
+  const _m = m.match(
+    /^(\+?[PLNSGBRKplnsgbrk])\*([1-9][a-i])([1-9][a-i])(\+?)$/
+  );
+  return _m
+    ? `${turn_readable(_m[1])}${sq_readable(_m[2])}${piece_readable(
+        _m[1]
+      )}→${turn_readable(_m[1])}${sq_readable(_m[3])}${piece_readable(
+        `${_m[4]}${_m[1]}`
+      )}`
+    : "";
+};
+export const conv_readable_capture = (p: string): string =>
+  `${turn_readable(p)}${piece_readable(p)}`;
+export const castle = castleOrgData
+  .reduce<CastleEntryType[]>((r, e) => {
     if (e.noturn) {
       r.push({
         id: e.id,
@@ -244,37 +269,11 @@ const castle = castleOrgData
   }, [])
   .map((e) =>
     Object.assign({}, e, {
-      pieces_readable: e.pieces?.map((p) => {
-        const _m = p.match(/^(\+?[_PLNSGBRKplnsgbrk])\*([1-9][a-i])$/);
-        return _m
-          ? `${turn_readable(_m[1])}${sq_readable(_m[2])}${piece_readable(
-              _m[1]
-            )}`
-          : "";
-      }),
-      hand_readable: e.hand?.map((p) => {
-        const _m = p.match(/^(\+?[PLNSGBRKplnsgbrk])$/);
-        return _m ? `${turn_readable(_m[1])}${piece_readable(_m[1])}` : "";
-      }),
-      hand_exclude_readable: e.hand_exclude?.map((p) => {
-        const _m = p.match(/^(\+?[PLNSGBRKplnsgbrk])$/);
-        return _m ? `${turn_readable(_m[1])}${piece_readable(_m[1])}` : "";
-      }),
-      moves_readable: e.moves?.map((m) => {
-        const _m = m.match(
-          /^(\+?[PLNSGBRKplnsgbrk])\*([1-9][a-i])([1-9][a-i])(\+?)$/
-        );
-        return _m
-          ? `${turn_readable(_m[1])}${sq_readable(_m[2])}${piece_readable(
-              _m[1]
-            )}→${turn_readable(_m[1])}${sq_readable(_m[3])}${piece_readable(
-              `${_m[4]}${_m[1]}`
-            )}`
-          : "";
-      }),
-      capture_readable: e.capture?.map(
-        (p) => `${turn_readable(p)}${piece_readable(p)}`
-      ),
+      pieces_readable: e.pieces?.map(conv_readable_pieces),
+      hand_readable: e.hand?.map(conv_readable_hand),
+      hand_exclude_readable: e.hand_exclude?.map(conv_readable_hand),
+      moves_readable: e.moves?.map(conv_readable_moves),
+      capture_readable: e.capture?.map(conv_readable_capture),
     })
   );
 

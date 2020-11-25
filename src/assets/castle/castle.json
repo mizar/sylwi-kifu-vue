@@ -1,6 +1,6 @@
 [
   {
-    "id": "HIRATE",
+    "id": "INITIAL_HIRATE",
     "name": {
       "ja_JP": "平手"
     },
@@ -69,7 +69,7 @@
     "noturn": true
   },
   {
-    "id": "KAKUGAWARI",
+    "id": "SHAPE_KAKUGAWARI",
     "name": {
       "ja_JP": "角換わり"
     },
@@ -81,7 +81,7 @@
     "noturn": true
   },
   {
-    "id": "SENTE_HISHASAKI_FUKOUKAN",
+    "id": "SENTE_SHAPE_HISHASAKI_FUKOUKAN",
     "name": {
       "ja_JP": "先手飛車先歩交換"
     },
@@ -96,7 +96,7 @@
     "noturn": true
   },
   {
-    "id": "GOTE_HISHASAKI_FUKOUKAN",
+    "id": "GOTE_SHAPE_HISHASAKI_FUKOUKAN",
     "name": {
       "ja_JP": "後手飛車先歩交換"
     },
@@ -111,7 +111,7 @@
     "noturn": true
   },
   {
-    "id": "SENTE_YOKOFU",
+    "id": "SENTE_SHAPE_YOKOFU",
     "name": {
       "ja_JP": "先手横歩"
     },
@@ -122,13 +122,13 @@
       "p"
     ],
     "tags_disable": [
-      "AIGAKARI"
+      "SHAPE_AIGAKARI"
     ],
     "tesuu_max": 20,
     "noturn": true
   },
   {
-    "id": "GOTE_YOKOFU",
+    "id": "GOTE_SHAPE_YOKOFU",
     "name": {
       "ja_JP": "後手横歩"
     },
@@ -139,29 +139,29 @@
       "P"
     ],
     "tags_disable": [
-      "AIGAKARI"
+      "SHAPE_AIGAKARI"
     ],
     "tesuu_max": 20,
     "noturn": true
   },
   {
-    "id": "AIGAKARI",
+    "id": "SHAPE_AIGAKARI",
     "name": {
       "ja_JP": "相掛かり"
     },
     "tags_required": [
-      "SENTE_HISHASAKI_FUKOUKAN",
-      "GOTE_HISHASAKI_FUKOUKAN"
+      "SENTE_SHAPE_HISHASAKI_FUKOUKAN",
+      "GOTE_SHAPE_HISHASAKI_FUKOUKAN"
     ],
     "tags_exclude": [
-      "SENTE_YOKOFU",
-      "GOTE_YOKOFU"
+      "SENTE_SHAPE_YOKOFU",
+      "GOTE_SHAPE_YOKOFU"
     ],
     "tesuu_max": 64,
     "noturn": true
   },
   {
-    "id": "MUKAIBISHA",
+    "id": "SHAPE_MUKAIBISHA",
     "name": {
       "ja_JP": "向かい飛車"
     },
@@ -171,7 +171,7 @@
     "tesuu_max": 20
   },
   {
-    "id": "SANGEN",
+    "id": "SHAPE_SANGEN",
     "name": {
       "ja_JP": "三間飛車"
     },
@@ -181,7 +181,7 @@
     "tesuu_max": 20
   },
   {
-    "id": "SHIKEN",
+    "id": "SHAPE_SHIKEN",
     "name": {
       "ja_JP": "四間飛車"
     },
@@ -191,7 +191,7 @@
     "tesuu_max": 20
   },
   {
-    "id": "NAKABISHA",
+    "id": "SHAPE_NAKABISHA",
     "name": {
       "ja_JP": "中飛車"
     },
@@ -201,7 +201,7 @@
     "tesuu_max": 20
   },
   {
-    "id": "MIGISHIKEN",
+    "id": "SHAPE_MIGISHIKEN",
     "name": {
       "ja_JP": "右四間飛車"
     },
@@ -211,7 +211,7 @@
     "tesuu_max": 20
   },
   {
-    "id": "SODEBISHA",
+    "id": "SHAPE_SODEBISHA",
     "name": {
       "ja_JP": "袖飛車"
     },
@@ -219,6 +219,19 @@
       "R*2h3h"
     ],
     "tesuu_max": 20
+  },
+  {
+    "id": "MIGI_YAGURA",
+    "name": {
+      "ja_JP": "右矢倉"
+    },
+    "pieces": [
+      "K*2h",
+      "S*3g",
+      "G*3h",
+      "G*4g"
+    ],
+    "tesuu_max": 64
   },
   {
     "id": "HON_MINO",
@@ -230,9 +243,6 @@
       "S*3h",
       "G*4i",
       "G*5h"
-    ],
-    "tags_disable": [
-      "KATA_MINO"
     ],
     "tesuu_max": 64
   },
@@ -247,9 +257,6 @@
       "G*4i",
       "G*4g"
     ],
-    "tags_disable": [
-      "KATA_MINO"
-    ],
     "tesuu_max": 64
   },
   {
@@ -262,9 +269,6 @@
       "S*3h",
       "G*4i",
       "S*5h"
-    ],
-    "tags_disable": [
-      "KATA_MINO"
     ],
     "tesuu_max": 64
   },
@@ -291,9 +295,6 @@
       "G*4i",
       "G*5h",
       "S*4g"
-    ],
-    "tags_disable": [
-      "KATA_MINO"
     ],
     "tesuu_max": 64
   },
@@ -351,9 +352,6 @@
       "G*3h",
       "G*4g"
     ],
-    "tags_disable": [
-      "FURI_KATA_GINKAN"
-    ],
     "tesuu_max": 64
   },
   {
@@ -364,9 +362,6 @@
     "pieces": [
       "G*3h",
       "S*2g"
-    ],
-    "tags_disable": [
-      "FURI_KATA_GINKAN"
     ],
     "tesuu_max": 64
   },
@@ -466,23 +461,37 @@
     "tesuu_max": 64
   },
   {
-    "id": "YAGURA",
+    "id": "KINTADEN",
     "name": {
-      "ja_JP": "矢倉"
+      "ja_JP": "金多伝"
     },
     "pieces": [
-      "G*7h",
-      "S*7g"
+      "K*3h",
+      "S*4f",
+      "G*4g",
+      "G*4h",
+      "N*3g"
     ],
-    "hand_exclude": [
-      "B"
+    "tesuu_max": 64
+  },
+  {
+    "id": "GINTADEN",
+    "name": {
+      "ja_JP": "銀多伝"
+    },
+    "pieces": [
+      "K*3h",
+      "S*4f",
+      "S*4g",
+      "G*4h",
+      "N*3g"
     ],
     "tesuu_max": 64
   },
   {
     "id": "YAGURA",
     "name": {
-      "ja_JP": "矢倉"
+      "ja_JP": "金矢倉"
     },
     "pieces": [
       "K*8h",
@@ -506,19 +515,6 @@
     "tesuu_max": 64
   },
   {
-    "id": "GINTACHI_YAGURA",
-    "name": {
-      "ja_JP": "銀立ち矢倉"
-    },
-    "pieces": [
-      "K*8h",
-      "G*7h",
-      "G*6g",
-      "S*7f"
-    ],
-    "tesuu_max": 64
-  },
-  {
     "id": "GIN_YAGURA",
     "name": {
       "ja_JP": "銀矢倉"
@@ -532,6 +528,19 @@
     "tesuu_max": 64
   },
   {
+    "id": "KATA_YAGURA",
+    "name": {
+      "ja_JP": "片矢倉"
+    },
+    "pieces": [
+      "K*7h",
+      "S*7g",
+      "G*6g",
+      "G*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
     "id": "BONANZA",
     "name": {
       "ja_JP": "ボナンザ囲い"
@@ -541,6 +550,20 @@
       "S*7g",
       "G*6h",
       "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "DOI_YAGURA",
+    "name": {
+      "ja_JP": "土井矢倉"
+    },
+    "pieces": [
+      "K*7h",
+      "S*7g",
+      "G*6g",
+      "G*5h",
+      "S*4g"
     ],
     "tesuu_max": 64
   },
@@ -573,6 +596,19 @@
     "tesuu_max": 64
   },
   {
+    "id": "GINTACHI_YAGURA",
+    "name": {
+      "ja_JP": "銀立ち矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
+      "G*6g",
+      "S*7f"
+    ],
+    "tesuu_max": 64
+  },
+  {
     "id": "KIKUSUI_YAGURA",
     "name": {
       "ja_JP": "菊水矢倉"
@@ -600,15 +636,71 @@
     "tesuu_max": 64
   },
   {
-    "id": "KATA_YAGURA",
+    "id": "KABUTO_YAGURA",
     "name": {
-      "ja_JP": "片矢倉"
+      "ja_JP": "兜矢倉"
     },
     "pieces": [
-      "K*7h",
+      "K*6h",
       "S*7g",
+      "G*7h",
+      "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "NAGARE_YAGURA",
+    "name": {
+      "ja_JP": "流れ矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "G*7h",
       "G*6g",
+      "S*5g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "SHIKAKU_KIN_YAGURA",
+    "name": {
+      "ja_JP": "四角金矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "S*7g",
+      "G*7h",
+      "G*6g",
+      "S*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "SHIKAKU_GIN_YAGURA",
+    "name": {
+      "ja_JP": "四角銀矢倉"
+    },
+    "pieces": [
+      "K*8h",
+      "S*7g",
+      "G*7h",
+      "S*6g",
       "G*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "RYUUSEN_YAGURA",
+    "name": {
+      "ja_JP": "流線矢倉"
+    },
+    "pieces": [
+      "K*8i",
+      "S*8h",
+      "N*7g",
+      "G*7h",
+      "G*6g",
+      "S*5g"
     ],
     "tesuu_max": 64
   },
@@ -623,9 +715,6 @@
       "G*7h",
       "G*6g"
     ],
-    "tags_disable": [
-      "KATA_GINKAN"
-    ],
     "tesuu_max": 64
   },
   {
@@ -639,9 +728,6 @@
       "N*8i",
       "S*8g",
       "G*7h"
-    ],
-    "tags_disable": [
-      "KATA_GINKAN"
     ],
     "tesuu_max": 64
   },
@@ -685,6 +771,36 @@
     "pieces": [
       "K*9i",
       "L*9h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "YAGURA_ANAGUMA",
+    "name": {
+      "ja_JP": "矢倉穴熊"
+    },
+    "pieces": [
+      "K*9i",
+      "L*9h",
+      "N*8i",
+      "S*7g",
+      "G*7h",
+      "G*6g"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "KANZEN_ANAGUMA",
+    "name": {
+      "ja_JP": "完全穴熊"
+    },
+    "pieces": [
+      "K*9i",
+      "L*9h",
+      "N*8i",
+      "S*8h",
+      "G*7g",
+      "G*7h"
     ],
     "tesuu_max": 64
   },
@@ -741,8 +857,53 @@
     },
     "pieces": [
       "K*7h",
+      "B*8h",
       "S*7i",
       "G*6i",
+      "G*5h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FUNAGAKOI_68GIN",
+    "name": {
+      "ja_JP": "６八銀型船囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "B*8h",
+      "S*6h",
+      "G*6i",
+      "G*4i"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FUNAGAKOI_57GIN_L",
+    "name": {
+      "ja_JP": "５七銀左型船囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "B*8h",
+      "S*5g",
+      "G*6i",
+      "G*5h",
+      "S*4h"
+    ],
+    "tesuu_max": 64
+  },
+  {
+    "id": "FUNAGAKOI_57GIN_R",
+    "name": {
+      "ja_JP": "５七銀右型船囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "B*8h",
+      "S*6h",
+      "G*6i",
+      "S*5g",
       "G*5h"
     ],
     "tesuu_max": 64
@@ -1087,50 +1248,99 @@
     "noturn": true
   },
   {
-    "id": "SPECIAL_CHUDAN",
-    "name": {
-      "ja_JP": "中断",
-      "en_US": "CHUDAN"
-    },
-    "special": "CHUDAN",
-    "tesuu_max": 1000000000,
-    "noturn": true
-  },
-  {
     "id": "SPECIAL_TORYO",
     "name": {
-      "ja_JP": "投了",
-      "en_US": "TORYO"
+      "ja_JP": "投了"
     },
     "special": "TORYO",
     "tesuu_max": 1000000000,
     "noturn": true
   },
   {
-    "id": "SPECIAL_JISHOGI",
+    "id": "SPECIAL_CHUDAN",
     "name": {
-      "ja_JP": "持将棋",
-      "en_US": "JISHOGI"
+      "ja_JP": "中断"
     },
-    "special": "JISHOGI",
+    "special": "CHUDAN",
     "tesuu_max": 1000000000,
     "noturn": true
   },
   {
     "id": "SPECIAL_SENNICHITE",
     "name": {
-      "ja_JP": "千日手",
-      "en_US": "SENNICHITE"
+      "ja_JP": "千日手"
     },
     "special": "SENNICHITE",
     "tesuu_max": 1000000000,
     "noturn": true
   },
   {
+    "id": "SPECIAL_TIME_UP",
+    "name": {
+      "ja_JP": "切れ負け"
+    },
+    "special": "TIME_UP",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_ILLEGAL_MOVE",
+    "name": {
+      "ja_JP": "反則手"
+    },
+    "special": "ILLEGAL_MOVE",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_SENTE_ILLEGAL_ACTION",
+    "name": {
+      "ja_JP": "先手反則行為"
+    },
+    "special": "+ILLEGAL_ACTION",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_GOTE_ILLEGAL_ACTION",
+    "name": {
+      "ja_JP": "後手反則行為"
+    },
+    "special": "-ILLEGAL_ACTION",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_JISHOGI",
+    "name": {
+      "ja_JP": "持将棋"
+    },
+    "special": "JISHOGI",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_KACHI",
+    "name": {
+      "ja_JP": "勝ち宣言"
+    },
+    "special": "KACHI",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
+    "id": "SPECIAL_HIKIWAKE",
+    "name": {
+      "ja_JP": "引き分け宣言"
+    },
+    "special": "HIKIWAKE",
+    "tesuu_max": 1000000000,
+    "noturn": true
+  },
+  {
     "id": "SPECIAL_TSUMI",
     "name": {
-      "ja_JP": "詰み",
-      "en_US": "TSUMI"
+      "ja_JP": "詰み"
     },
     "special": "TSUMI",
     "tesuu_max": 1000000000,
@@ -1139,50 +1349,18 @@
   {
     "id": "SPECIAL_FUZUMI",
     "name": {
-      "ja_JP": "不詰",
-      "en_US": "FUZUMI"
+      "ja_JP": "不詰"
     },
     "special": "FUZUMI",
     "tesuu_max": 1000000000,
     "noturn": true
   },
   {
-    "id": "SPECIAL_TIME_UP",
+    "id": "SPECIAL_ERROR",
     "name": {
-      "ja_JP": "切れ負け",
-      "en_US": "TIME_UP"
+      "ja_JP": "エラー"
     },
-    "special": "TIME_UP",
-    "tesuu_max": 1000000000,
-    "noturn": true
-  },
-  {
-    "id": "SPECIAL_ILLEGAL_ACTION",
-    "name": {
-      "ja_JP": "反則行為",
-      "en_US": "ILLEGAL_ACTION"
-    },
-    "special": "ILLEGAL_ACTION",
-    "tesuu_max": 1000000000,
-    "noturn": true
-  },
-  {
-    "id": "SPECIAL_ILLEGAL_MOVE",
-    "name": {
-      "ja_JP": "反則手",
-      "en_US": "ILLEGAL_MOVE"
-    },
-    "special": "ILLEGAL_MOVE",
-    "tesuu_max": 1000000000,
-    "noturn": true
-  },
-  {
-    "id": "SPECIAL_KACHI",
-    "name": {
-      "ja_JP": "勝ち宣言",
-      "en_US": "KACHI"
-    },
-    "special": "KACHI",
+    "special": "ERROR",
     "tesuu_max": 1000000000,
     "noturn": true
   }

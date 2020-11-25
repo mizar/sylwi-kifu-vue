@@ -195,7 +195,7 @@ export default defineComponent({
     watch(() => props.limitTimeDur, loadKifuList);
     watch(() => props.limitNumber, loadKifuList);
     execInterval();
-    data.intervalId = setInterval(execInterval, 60000);
+    data.intervalId = window.setInterval(execInterval, 60000);
     return {
       props,
       data,

@@ -1,6 +1,7 @@
 <template>
   <div class="tournament">
     <h1>tournament : {{ props.tournament }}</h1>
+    <PR />
     <p>
       <GameSelect :tournament="props.tournament" @change-game="changeGame" />
     </p>
@@ -21,8 +22,7 @@
 
 <style lang="scss">
 .tournament {
-  height: unquote("max(97vh, 100vh - 1.5em)");
-  overflow: auto;
+  margin: 1vw;
 }
 </style>
 
@@ -31,6 +31,7 @@ import { defineComponent, reactive, computed } from "vue";
 import { useRouter } from "vue-router";
 import GameSelect from "@/components/GameSelect.vue";
 import GameList from "@/components/GameList.vue";
+import PR from "@/components/PR.vue";
 
 export default defineComponent({
   props: {
@@ -92,6 +93,7 @@ export default defineComponent({
   components: {
     GameSelect,
     GameList,
+    PR,
   },
 });
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div class="single">
+    <PR />
     <GameSelect
       :tournament="data.tournament"
       :gameid="data.gameid"
@@ -19,9 +20,8 @@
 </template>
 
 <style lang="scss">
-.multi {
-  height: unquote("max(97vh, 100vh - 1.5em)");
-  overflow: auto;
+.single {
+  margin: 0 1vw;
 }
 </style>
 
@@ -30,6 +30,7 @@ import { defineComponent, reactive, watch } from "vue";
 import { useRouter } from "vue-router";
 import GameSelect from "@/components/GameSelect.vue";
 import Kifu from "@/components/Kifu.vue";
+import PR from "@/components/PR.vue";
 
 export default defineComponent({
   props: {
@@ -123,6 +124,7 @@ export default defineComponent({
   components: {
     GameSelect,
     Kifu,
+    PR,
   },
 });
 </script>

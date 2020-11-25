@@ -2,6 +2,7 @@
   <div class="about">
     <div class="append">
       <h3>Computer Shogi</h3>
+      <PR />
       <ul>
         <li>
           <a href="https://www.denryu-sen.jp/" target="_blank" rel="noopener"
@@ -49,6 +50,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import PR from "@/components/PR.vue";
 
 export default defineComponent({
   name: "Home",
@@ -58,12 +60,15 @@ export default defineComponent({
       licenses: require("@/licenses.json"),
     };
   },
-  components: {},
+  components: {
+    PR,
+  },
 });
 </script>
 
 <style scoped lang="scss">
 div.append {
+  margin: 0 1vw;
   h3 {
     margin: 40px 0 0;
   }

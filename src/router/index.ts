@@ -6,6 +6,7 @@ import Tournament from "@/views/Tournament.vue";
 import KifuSingle from "@/views/KifuSingle.vue";
 import KifuMulti from "@/views/KifuMulti.vue";
 import About from "@/views/About.vue";
+import Castle from "@/views/Castle.vue";
 import Test from "@/views/Test.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/about",
     name: "About",
     component: About,
+  },
+  {
+    path: "/castle",
+    name: "Castle",
+    component: Castle,
   },
   {
     path: "/test",

@@ -633,7 +633,7 @@ export default defineComponent({
           }
         });
     };
-    data.intervalId = setInterval(() => {
+    data.intervalId = window.setInterval(() => {
       if (data.needAutoFetch || data.inGame) {
         loadKifu();
       }
