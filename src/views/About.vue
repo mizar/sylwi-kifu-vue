@@ -57,7 +57,7 @@ export default defineComponent({
   setup(props) {
     return {
       props,
-      licenses: require("@/licenses.json"),
+      licenses: require("@/assets/licenses.json"),
     };
   },
   components: {

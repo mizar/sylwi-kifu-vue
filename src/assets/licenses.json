@@ -2,7 +2,7 @@
   "@babel/helper-validator-identifier@7.10.4": {
     "licenses": "MIT",
     "repository": "https://github.com/babel/babel",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babel\\helper-validator-identifier",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babel\\helper-validator-identifier",
     "licenseFile": "node_modules\\@babel\\helper-validator-identifier\\LICENSE"
   },
   "@babel/parser@7.12.5": {
@@ -10,7 +10,7 @@
     "repository": "https://github.com/babel/babel",
     "publisher": "Sebastian McKenzie",
     "email": "sebmck@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babel\\parser",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babel\\parser",
     "licenseFile": "node_modules\\@babel\\parser\\LICENSE"
   },
   "@babel/types@7.12.6": {
@@ -18,128 +18,135 @@
     "repository": "https://github.com/babel/babel",
     "publisher": "Sebastian McKenzie",
     "email": "sebmck@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babel\\types",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babel\\types",
     "licenseFile": "node_modules\\@babel\\types\\LICENSE"
   },
   "@babylonjs/core@4.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/BabylonJS/Babylon.js",
     "publisher": "David CATUHE",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babylonjs\\core",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\core",
     "licenseFile": "node_modules\\@babylonjs\\core\\license.md"
   },
   "@babylonjs/gui@4.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/BabylonJS/Babylon.js",
     "publisher": "David CATUHE",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babylonjs\\gui",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\gui",
     "licenseFile": "node_modules\\@babylonjs\\gui\\readme.md"
   },
   "@babylonjs/materials@4.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/BabylonJS/Babylon.js",
     "publisher": "David CATUHE",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babylonjs\\materials",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\materials",
     "licenseFile": "node_modules\\@babylonjs\\materials\\readme.md"
   },
   "@babylonjs/post-processes@4.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/BabylonJS/Babylon.js",
     "publisher": "David CATUHE",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babylonjs\\post-processes",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\post-processes",
     "licenseFile": "node_modules\\@babylonjs\\post-processes\\readme.md"
   },
   "@babylonjs/procedural-textures@4.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/BabylonJS/Babylon.js",
     "publisher": "David CATUHE",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babylonjs\\procedural-textures",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\procedural-textures",
     "licenseFile": "node_modules\\@babylonjs\\procedural-textures\\readme.md"
   },
   "@babylonjs/serializers@4.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/BabylonJS/Babylon.js",
     "publisher": "David CATUHE",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@babylonjs\\serializers",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\serializers",
     "licenseFile": "node_modules\\@babylonjs\\serializers\\readme.md"
   },
   "@types/hoist-non-react-statics@3.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@types\\hoist-non-react-statics",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@types\\hoist-non-react-statics",
     "licenseFile": "node_modules\\@types\\hoist-non-react-statics\\LICENSE"
   },
   "@types/prop-types@15.7.3": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@types\\prop-types",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@types\\prop-types",
     "licenseFile": "node_modules\\@types\\prop-types\\LICENSE"
   },
   "@types/react@17.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@types\\react",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@types\\react",
     "licenseFile": "node_modules\\@types\\react\\LICENSE"
   },
   "@vue/compiler-core@3.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@vue\\compiler-core",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\compiler-core",
     "licenseFile": "node_modules\\@vue\\compiler-core\\LICENSE"
   },
   "@vue/compiler-dom@3.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@vue\\compiler-dom",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\compiler-dom",
     "licenseFile": "node_modules\\@vue\\compiler-dom\\LICENSE"
   },
   "@vue/reactivity@3.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@vue\\reactivity",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\reactivity",
     "licenseFile": "node_modules\\@vue\\reactivity\\LICENSE"
   },
   "@vue/runtime-core@3.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@vue\\runtime-core",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\runtime-core",
     "licenseFile": "node_modules\\@vue\\runtime-core\\LICENSE"
   },
   "@vue/runtime-dom@3.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@vue\\runtime-dom",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\runtime-dom",
     "licenseFile": "node_modules\\@vue\\runtime-dom\\LICENSE"
   },
   "@vue/shared@3.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@vue\\shared",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\shared",
     "licenseFile": "node_modules\\@vue\\shared\\README.md"
+  },
+  "ammojs-typed@1.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/giniedp/ammojs-typed",
+    "publisher": "Alexander Gräfenstein",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\ammojs-typed",
+    "licenseFile": "node_modules\\ammojs-typed\\Readme.md"
   },
   "asap@2.0.6": {
     "licenses": "MIT",
     "repository": "https://github.com/kriskowal/asap",
-    "path": "C:\\git\\try-vue-next\\node_modules\\asap",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\asap",
     "licenseFile": "node_modules\\asap\\LICENSE.md"
   },
   "babylonjs-gltf2interface@4.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/BabylonJS/Babylon.js",
-    "path": "C:\\git\\try-vue-next\\node_modules\\babylonjs-gltf2interface"
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\babylonjs-gltf2interface"
   },
   "csstype@2.6.13": {
     "licenses": "MIT",
     "repository": "https://github.com/frenic/csstype",
     "publisher": "Fredrik Nicol",
     "email": "fredrik.nicol@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\csstype",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\csstype",
     "licenseFile": "node_modules\\csstype\\LICENSE"
   },
   "csstype@3.0.5": {
@@ -147,13 +154,13 @@
     "repository": "https://github.com/frenic/csstype",
     "publisher": "Fredrik Nicol",
     "email": "fredrik.nicol@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\@types\\react\\node_modules\\csstype",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@types\\react\\node_modules\\csstype",
     "licenseFile": "node_modules\\@types\\react\\node_modules\\csstype\\LICENSE"
   },
   "dnd-core@7.7.0": {
     "licenses": "MIT",
     "repository": "https://github.com/react-dnd/react-dnd",
-    "path": "C:\\git\\try-vue-next\\node_modules\\dnd-core",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\dnd-core",
     "licenseFile": "node_modules\\dnd-core\\LICENSE"
   },
   "dnd-multi-backend@3.2.1": {
@@ -162,14 +169,14 @@
     "publisher": "Louis Brunner",
     "email": "louis.brunner.fr@gmail.com",
     "url": "https://github.com/LouisBrunner",
-    "path": "C:\\git\\try-vue-next\\node_modules\\dnd-multi-backend",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\dnd-multi-backend",
     "licenseFile": "node_modules\\dnd-multi-backend\\README.md"
   },
   "estree-walker@2.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/Rich-Harris/estree-walker",
     "publisher": "Rich Harris",
-    "path": "C:\\git\\try-vue-next\\node_modules\\estree-walker",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\estree-walker",
     "licenseFile": "node_modules\\estree-walker\\README.md"
   },
   "hoist-non-react-statics@3.3.2": {
@@ -177,7 +184,7 @@
     "repository": "https://github.com/mridgway/hoist-non-react-statics",
     "publisher": "Michael Ridgway",
     "email": "mcridgway@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\hoist-non-react-statics",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\hoist-non-react-statics",
     "licenseFile": "node_modules\\hoist-non-react-statics\\LICENSE.md"
   },
   "invariant@2.2.4": {
@@ -185,28 +192,28 @@
     "repository": "https://github.com/zertosh/invariant",
     "publisher": "Andres Suarez",
     "email": "zertosh@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\invariant",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\invariant",
     "licenseFile": "node_modules\\invariant\\LICENSE"
   },
   "js-tokens@4.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/lydell/js-tokens",
     "publisher": "Simon Lydell",
-    "path": "C:\\git\\try-vue-next\\node_modules\\js-tokens",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\js-tokens",
     "licenseFile": "node_modules\\js-tokens\\LICENSE"
   },
   "json-kifu-format@1.2.7": {
     "licenses": "MIT",
     "repository": "https://github.com/na2hiro/json-kifu-format",
     "publisher": "na2hiro",
-    "path": "C:\\git\\try-vue-next\\node_modules\\json-kifu-format",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\json-kifu-format",
     "licenseFile": "node_modules\\json-kifu-format\\LICENSE.txt"
   },
   "kifu-for-js@2.2.2": {
     "licenses": "MIT",
     "repository": "https://github.com/na2hiro/Kifu-for-JS",
     "publisher": "na2hiro",
-    "path": "C:\\git\\try-vue-next\\node_modules\\kifu-for-js",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\kifu-for-js",
     "licenseFile": "node_modules\\kifu-for-js\\LICENSE.txt"
   },
   "lodash@4.17.20": {
@@ -214,7 +221,7 @@
     "repository": "https://github.com/lodash/lodash",
     "publisher": "John-David Dalton",
     "email": "john.david.dalton@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\lodash",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\lodash",
     "licenseFile": "node_modules\\lodash\\LICENSE"
   },
   "loose-envify@1.4.0": {
@@ -222,27 +229,35 @@
     "repository": "https://github.com/zertosh/loose-envify",
     "publisher": "Andres Suarez",
     "email": "zertosh@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\loose-envify",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\loose-envify",
     "licenseFile": "node_modules\\loose-envify\\LICENSE"
   },
   "mobx-react@5.4.4": {
     "licenses": "MIT",
     "repository": "https://github.com/mobxjs/mobx-react",
     "publisher": "Michel Weststrate",
-    "path": "C:\\git\\try-vue-next\\node_modules\\mobx-react",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\mobx-react",
     "licenseFile": "node_modules\\mobx-react\\LICENSE"
   },
   "mobx@4.15.7": {
     "licenses": "MIT",
     "repository": "https://github.com/mobxjs/mobx",
     "publisher": "Michel Weststrate",
-    "path": "C:\\git\\try-vue-next\\node_modules\\mobx",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\mobx",
     "licenseFile": "node_modules\\mobx\\LICENSE"
+  },
+  "mtrand@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tcort/mtrand",
+    "publisher": "Thomas Cort",
+    "email": "linuxgeek@gmail.com",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\mtrand",
+    "licenseFile": "node_modules\\mtrand\\LICENSE.md"
   },
   "noto-sans-cjk-jp@1.0.1": {
     "licenses": "MIT",
     "publisher": "kacchan6",
-    "path": "C:\\git\\try-vue-next\\node_modules\\noto-sans-cjk-jp"
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\noto-sans-cjk-jp"
   },
   "object-assign@4.1.1": {
     "licenses": "MIT",
@@ -250,19 +265,19 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\object-assign",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\object-assign",
     "licenseFile": "node_modules\\object-assign\\license"
   },
   "prop-types@15.7.2": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/prop-types",
-    "path": "C:\\git\\try-vue-next\\node_modules\\prop-types",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\prop-types",
     "licenseFile": "node_modules\\prop-types\\LICENSE"
   },
   "react-dnd-html5-backend@2.6.0": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/react-dnd/react-dnd",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-dnd-html5-backend",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-dnd-html5-backend",
     "licenseFile": "node_modules\\react-dnd-html5-backend\\LICENSE"
   },
   "react-dnd-multi-backend@3.2.2": {
@@ -271,7 +286,7 @@
     "publisher": "Louis Brunner",
     "email": "louis.brunner.fr@gmail.com",
     "url": "https://github.com/LouisBrunner",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-dnd-multi-backend",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-dnd-multi-backend",
     "licenseFile": "node_modules\\react-dnd-multi-backend\\README.md"
   },
   "react-dnd-preview@3.2.2": {
@@ -280,7 +295,7 @@
     "publisher": "Louis Brunner",
     "email": "louis.brunner.fr@gmail.com",
     "url": "https://github.com/LouisBrunner",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-dnd-preview",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-dnd-preview",
     "licenseFile": "node_modules\\react-dnd-preview\\README.md"
   },
   "react-dnd-touch-backend@0.8.3": {
@@ -288,49 +303,49 @@
     "repository": "https://github.com/yahoo/react-dnd-touch-backend",
     "publisher": "Long Ho",
     "email": "holevietlong@gmail.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-dnd-touch-backend",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-dnd-touch-backend",
     "licenseFile": "node_modules\\react-dnd-touch-backend\\LICENSE"
   },
   "react-dnd@7.7.0": {
     "licenses": "MIT",
     "repository": "https://github.com/react-dnd/react-dnd",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-dnd",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-dnd",
     "licenseFile": "node_modules\\react-dnd\\LICENSE"
   },
   "react-dom@16.14.0": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-dom",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-dom",
     "licenseFile": "node_modules\\react-dom\\LICENSE"
   },
   "react-is@16.13.1": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-is",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-is",
     "licenseFile": "node_modules\\react-is\\LICENSE"
   },
   "react-lifecycles-compat@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/reactjs/react-lifecycles-compat",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react-lifecycles-compat",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react-lifecycles-compat",
     "licenseFile": "node_modules\\react-lifecycles-compat\\LICENSE.md"
   },
   "react@16.14.0": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\git\\try-vue-next\\node_modules\\react",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\react",
     "licenseFile": "node_modules\\react\\LICENSE"
   },
   "redux@4.0.5": {
     "licenses": "MIT",
     "repository": "https://github.com/reduxjs/redux",
-    "path": "C:\\git\\try-vue-next\\node_modules\\redux",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\redux",
     "licenseFile": "node_modules\\redux\\LICENSE.md"
   },
   "scheduler@0.19.1": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\git\\try-vue-next\\node_modules\\scheduler",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\scheduler",
     "licenseFile": "node_modules\\scheduler\\LICENSE"
   },
   "shallowequal@1.1.0": {
@@ -339,14 +354,14 @@
     "publisher": "Alberto Leal",
     "email": "mailforalberto@gmail.com",
     "url": "github.com/dashed",
-    "path": "C:\\git\\try-vue-next\\node_modules\\shallowequal",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\shallowequal",
     "licenseFile": "node_modules\\shallowequal\\LICENSE"
   },
   "shogi.js@2.0.3": {
     "licenses": "MIT",
     "repository": "https://github.com/na2hiro/Shogi.js",
     "publisher": "na2hiro",
-    "path": "C:\\git\\try-vue-next\\node_modules\\shogi.js",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\shogi.js",
     "licenseFile": "node_modules\\shogi.js\\README.md"
   },
   "source-map@0.6.1": {
@@ -354,7 +369,7 @@
     "repository": "https://github.com/mozilla/source-map",
     "publisher": "Nick Fitzgerald",
     "email": "nfitzgerald@mozilla.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\source-map",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\source-map",
     "licenseFile": "node_modules\\source-map\\LICENSE"
   },
   "symbol-observable@1.2.0": {
@@ -362,13 +377,13 @@
     "repository": "https://github.com/blesh/symbol-observable",
     "publisher": "Ben Lesh",
     "email": "ben@benlesh.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\symbol-observable",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\symbol-observable",
     "licenseFile": "node_modules\\symbol-observable\\license"
   },
   "tabler-icons@1.35.0": {
     "licenses": "MIT",
     "repository": "https://github.com/tabler/tabler-icons",
-    "path": "C:\\git\\try-vue-next\\node_modules\\tabler-icons",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\tabler-icons",
     "licenseFile": "node_modules\\tabler-icons\\LICENSE"
   },
   "to-fast-properties@2.0.0": {
@@ -377,33 +392,33 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\git\\try-vue-next\\node_modules\\to-fast-properties",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\to-fast-properties",
     "licenseFile": "node_modules\\to-fast-properties\\license"
   },
   "tslib@2.0.3": {
     "licenses": "0BSD",
     "repository": "https://github.com/Microsoft/tslib",
     "publisher": "Microsoft Corp.",
-    "path": "C:\\git\\try-vue-next\\node_modules\\tslib",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\tslib",
     "licenseFile": "node_modules\\tslib\\LICENSE.txt"
   },
   "vue-router@4.0.0-rc.5": {
     "licenses": "MIT",
-    "path": "C:\\git\\try-vue-next\\node_modules\\vue-router",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\vue-router",
     "licenseFile": "node_modules\\vue-router\\LICENSE"
   },
   "vue@3.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\vue",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\vue",
     "licenseFile": "node_modules\\vue\\README.md"
   },
   "vuex@4.0.0-rc.1": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vuex",
     "publisher": "Evan You",
-    "path": "C:\\git\\try-vue-next\\node_modules\\vuex",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\vuex",
     "licenseFile": "node_modules\\vuex\\LICENSE"
   }
 }

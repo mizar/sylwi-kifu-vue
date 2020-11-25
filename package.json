@@ -8,7 +8,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "license-checker": "license-checker --production --relativeLicensePath --excludePrivatePackages --json --out ./src/licenses.json"
+    "license-checker": "license-checker --production --relativeLicensePath --excludePrivatePackages --json --out ./src/assets/licenses.json"
   },
   "dependencies": {
     "@babylonjs/core": "^4.2.0",
@@ -17,8 +17,10 @@
     "@babylonjs/post-processes": "^4.2.0",
     "@babylonjs/procedural-textures": "^4.2.0",
     "@babylonjs/serializers": "^4.2.0",
+    "ammojs-typed": "^1.0.6",
     "json-kifu-format": "^1.2.7",
     "kifu-for-js": "^2.2.2",
+    "mtrand": "^1.1.0",
     "noto-sans-cjk-jp": "^1.0.1",
     "shogi.js": "^2.0.3",
     "tabler-icons": "^1.35.0",
@@ -40,7 +42,6 @@
     "@vue/compiler-sfc": "^3.0.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
-    "ammojs-typed": "^1.0.6",
     "brotli-webpack-plugin": "^1.1.0",
     "compression-webpack-plugin": "^6.1.1",
     "copy-webpack-plugin": "^6.3.2",
@@ -49,7 +50,6 @@
     "eslint-plugin-vue": "^7.1.0",
     "img-loader": "^3.0.2",
     "license-checker": "^25.0.1",
-    "mtrand": "^1.1.0",
     "prettier": "^2.2.0",
     "raw-loader": "^4.0.2",
     "sass": "^1.29.0",
