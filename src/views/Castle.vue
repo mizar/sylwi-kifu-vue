@@ -28,7 +28,7 @@
     </p>
     <textarea
       class="bod"
-      rows="15"
+      rows="17"
       cols="32"
       disabled
       :value="`後手の持駒：なし
@@ -66,6 +66,9 @@
 <style lang="scss">
 .castle {
   margin: 0 1vw;
+  img {
+    max-width: 100%;
+  }
 }
 </style>
 
