@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <div class="append">
-      <h3>Computer Shogi</h3>
       <PR />
+      <h3>Computer Shogi</h3>
       <ul>
         <li>
           <a href="https://www.denryu-sen.jp/" target="_blank" rel="noopener"

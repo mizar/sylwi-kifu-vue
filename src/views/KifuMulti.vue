@@ -1,7 +1,7 @@
 <template>
   <div class="multi">
-    <h1>tournament : {{ props.tournament }}</h1>
     <PR />
+    <h1>tournament : {{ props.tournament }}</h1>
     <p>
       <GameSelect :tournament="props.tournament" @change-game="changeGame" />
     </p>
