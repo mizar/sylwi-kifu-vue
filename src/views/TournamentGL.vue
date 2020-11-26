@@ -1,5 +1,5 @@
 <template>
-  <div class="tournament">
+  <div class="tournamentgl">
     <PR />
     <h1>tournament : {{ props.tournament }}</h1>
     <p>
@@ -21,7 +21,7 @@
 </template>
 
 <style lang="scss">
-.tournament {
+.tournamentgl {
   margin: 1vw;
 }
 </style>
