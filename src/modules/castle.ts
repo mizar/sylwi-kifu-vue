@@ -411,7 +411,7 @@ export const getTags = (player: JKFPlayer): TagsRet =>
             },
             tesuu_max: 1e9,
             tesuu: +_buoy[1],
-          })
+          });
         }
       }
       const _ma = comment.match(
