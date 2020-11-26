@@ -1,5 +1,5 @@
 <template>
-  <div class="single">
+  <div class="singlegl">
     <div class="gameselect">
       <GameSelect
         :tournament="data.tournament"
