@@ -13,6 +13,8 @@ export const getKifuMirrorUrl = (
         gameid.length - 8,
         gameid.length - 6
       )}/${gameid}.csa`
+    : window.location.host === "golan.sakura.ne.jp"
+    ? `https://golan.sakura.ne.jp/denryusen/${tournament}/kifufiles/${gameid}.csa`
     : `https://p.mzr.jp/denryusen/${tournament}/kifufiles/${gameid}.csa`;
 };
 
@@ -34,6 +36,8 @@ export const getKifuOrgUrl = (tournament: string, gameid: string): string => {
 export const fetchGameListMirrorUrl = (tournament: string): string => {
   return tournament === "floodgate"
     ? "https://p.mzr.jp/wdoor-latest/shogi-server.log"
+    : window.location.host === "golan.sakura.ne.jp"
+    ? `https://golan.sakura.ne.jp/denryusen/${tournament}/kifulist.txt`
     : `https://p.mzr.jp/denryusen/${tournament}/kifulist.txt`;
 };
 
