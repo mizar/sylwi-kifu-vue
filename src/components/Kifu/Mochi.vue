@@ -63,9 +63,7 @@ export default defineComponent({
                   ? " from"
                   : ""
               }`,
-              title: `${color === 0 ? "+" : "-"}${kind}${
-                num > 1 ? ` * ${num}` : ""
-              }`,
+              title: `${color === 0 ? "+" : "-"}${kind} * ${num}`,
             },
             Array.from({ length: num }).map((_, i) =>
               h("img", {
