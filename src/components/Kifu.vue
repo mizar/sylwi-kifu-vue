@@ -702,7 +702,7 @@ export default defineComponent({
                 props.gamename || ""
               )}`,
               hashtags: "将棋,電竜戦",
-              via: "",
+              via: "DenryuSen",
             };
       window.open(
         `https://twitter.com/intent/tweet?text=${encodeURIComponent(
