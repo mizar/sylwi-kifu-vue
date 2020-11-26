@@ -400,6 +400,20 @@ export const getTags = (player: JKFPlayer): TagsRet =>
       }
     });
     v.comments?.forEach((comment) => {
+      if (i === 0) {
+        const _buoy = comment.match(/^buoy game starting with ([0-9]+) moves$/);
+        if (_buoy) {
+          p.push({
+            id: "BUOY",
+            name: {
+              ja_JP: "指定局面",
+              en_US: "BUOY",
+            },
+            tesuu_max: 1e9,
+            tesuu: +_buoy[1],
+          })
+        }
+      }
       const _ma = comment.match(
         /^summary:([0-9A-Za-z_. -]+):([0-9A-Za-z_.-]+) (lose|draw|win):([0-9A-Za-z_.-]+) (lose|draw|win)$/
       );
