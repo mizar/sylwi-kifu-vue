@@ -365,7 +365,27 @@
     - N*3g
   tesuu_max: 64
 
-# 居飛車矢倉
+# 居飛車
+
+## - 一間飛車
+## - 右玉
+## - 引き角
+
+# 相居飛車 - 矢倉 - 戦法
+
+## - 阿久津流急戦矢倉
+## - カニカニ銀
+## - 雀刺し
+## - 森下システム
+## - 矢倉３七銀
+## - 矢倉３五歩早仕掛け
+## - 矢倉中飛車
+## - 矢倉早囲い
+## - 米長流急戦矢倉
+## - 四手角
+## - 脇システム
+
+# 相居飛車 - 矢倉 - 囲い
 
 - id: YAGURA
   name:
@@ -548,6 +568,17 @@
 ##   - 陽動振り飛車
 ##   - 左美濃急戦
 
+# 相居飛車 - 相掛かり - 戦法
+
+## - 腰掛け銀
+## - 鎖鎌銀
+## - 塚田スペシャル
+## - ひねり飛車
+## - 早繰り銀
+## - 中原流
+
+# 相居飛車 - 角換わり - 戦法
+
 # 居飛車銀冠
 
 - id: GINKAN
@@ -650,6 +681,7 @@
 - id: MILLENNIUM
   name:
     ja_JP: ミレニアム
+    ## 別名: カマクラ・カマボコ・トーチカ
   pieces:
     - K*8i
     - N*7g
@@ -658,7 +690,7 @@
     - G*7h
   tesuu_max: 64
 
-# 居飛車船囲い
+# 居飛車 対抗形 対振り飛車急戦 船囲い
 
 - id: FUNAGAKOI
   name:
@@ -702,6 +734,36 @@
     - S*5g
     - G*5h
   tesuu_max: 64
+- id: HAKOIRI_MUSUME
+  name:
+    ja_JP: 箱入り娘
+  pieces:
+    - K*7h
+    - S*7i
+    - G*6i
+    - G*6h
+  tesuu_max: 64
+- id: CEMENT
+  name:
+    ja_JP: セメント囲い
+  pieces:
+    - K*7h
+    - S*6g
+    - S*5g
+    - G*6h
+    - G*5h
+  tesuu_max: 64
+## - 二枚囲い
+## - 大住囲い（大隅囲い）
+- id: ELMO
+  name:
+    ja_JP: elmo囲い
+  pieces:
+    - K*7h
+    - B*8h
+    - G*7i
+    - S*6h
+  tesuu_max: 64
 
 ## - 居飛車船囲い急戦
 ##   - 対四間飛車系
@@ -723,26 +785,6 @@
 ##     - 棒銀
 ##     - 超速
 
-- id: HAKOIRI_MUSUME
-  name:
-    ja_JP: 箱入り娘
-  pieces:
-    - K*7h
-    - S*7i
-    - G*6i
-    - G*6h
-  tesuu_max: 64
-- id: CEMENT
-  name:
-    ja_JP: セメント囲い
-  pieces:
-    - K*7h
-    - S*6g
-    - S*5g
-    - G*6h
-    - G*5h
-  tesuu_max: 64
-
 # 居飛車美濃
 
 - id: HIDARI_MINO
@@ -763,6 +805,10 @@
     - G*6i
     - G*5h
   tesuu_max: 64
+## - 四枚美濃
+## - 銀冠
+## - 端玉銀冠
+## - 米長玉銀冠
 
 # 居飛車その他
 
@@ -782,15 +828,6 @@
     - G*5h
     - S*6g
     - S*4g
-  tesuu_max: 64
-- id: ELMO
-  name:
-    ja_JP: elmo囲い
-  pieces:
-    - K*7h
-    - K*5h
-    - G*7i
-    - S*6h
   tesuu_max: 64
 - id: URESHINO
   name:
@@ -861,6 +898,11 @@
     - G*5h
     - S*7i
   tesuu_max: 64
+
+# その他
+
+# - 多伝囲い
+
 - id: MUTEKI
   name:
     ja_JP: 無敵囲い
@@ -899,7 +941,7 @@
 ## - 角換わり棒銀
 ## - 筋違い角棒銀
 ## - 矢倉棒銀
-
+## - 一手損角換わり
 
 # 入玉判定(3段目のみ)
 

@@ -936,6 +936,19 @@
     "tesuu_max": 64
   },
   {
+    "id": "ELMO",
+    "name": {
+      "ja_JP": "elmo囲い"
+    },
+    "pieces": [
+      "K*7h",
+      "B*8h",
+      "G*7i",
+      "S*6h"
+    ],
+    "tesuu_max": 64
+  },
+  {
     "id": "HIDARI_MINO",
     "name": {
       "ja_JP": "左美濃"
@@ -983,19 +996,6 @@
       "G*5h",
       "S*6g",
       "S*4g"
-    ],
-    "tesuu_max": 64
-  },
-  {
-    "id": "ELMO",
-    "name": {
-      "ja_JP": "elmo囲い"
-    },
-    "pieces": [
-      "K*7h",
-      "K*5h",
-      "G*7i",
-      "S*6h"
     ],
     "tesuu_max": 64
   },
