@@ -15,7 +15,7 @@
       後半に示す、現行のタグ定義リストで足りないもの、間違っているものなどが有りましたら、是非
       <strong
         ><a
-          href="https://github.com/mizar/sylwi-kifu-vue/issues/new/choose"
+          href="https://github.com/mizar/sylwi-kifu-vue/issues/"
           target="_blank"
           rel="noopener"
           >GitHub Issues</a
