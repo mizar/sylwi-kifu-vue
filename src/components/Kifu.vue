@@ -686,21 +686,27 @@ export default defineComponent({
         props.tournament === "floodgate"
           ? {
               text: `${props.gamename} ${data.tesuu}手目 ${readableKifu}\n\n\n`,
-              url: `https://sylwi.mzr.jp/floodgate.php?tn=${
-                props.tournament
-              }&gi=${props.gameid}&p=${getPSfenWB64()}&gn=${encodeURIComponent(
-                props.gamename || ""
-              )}`,
+              url: new URL(
+                `./floodgate.php?tn=${props.tournament}&gi=${
+                  props.gameid
+                }&p=${getPSfenWB64()}&gn=${encodeURIComponent(
+                  props.gamename || ""
+                )}`,
+                window.location.href
+              ).href,
               hashtags: "将棋,floodgate",
               via: "",
             }
           : {
               text: `${props.gamename} ${data.tesuu}手目 ${readableKifu}\n\n\n`,
-              url: `https://sylwi.mzr.jp/denryu.php?tn=${props.tournament}&gi=${
-                props.gameid
-              }&p=${getPSfenWB64()}&gn=${encodeURIComponent(
-                props.gamename || ""
-              )}`,
+              url: new URL(
+                `./denryu.php?tn=${props.tournament}&gi=${
+                  props.gameid
+                }&p=${getPSfenWB64()}&gn=${encodeURIComponent(
+                  props.gamename || ""
+                )}`,
+                window.location.href
+              ).href,
               hashtags: "将棋,電竜戦",
               via: "DenryuSen",
             };
