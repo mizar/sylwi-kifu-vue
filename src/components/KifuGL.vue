@@ -580,7 +580,7 @@ export default defineComponent({
       if (data.needAutoFetch || data.inGame) {
         loadKifu();
       }
-    }, 10000);
+    }, 1000);
     const moveToReadableKifu = (mv: IMoveFormat): string => {
       return JKFPlayer.moveToReadableKifu(mv);
     };
