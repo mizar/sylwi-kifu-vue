@@ -5,7 +5,7 @@
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babel\\helper-validator-identifier",
     "licenseFile": "node_modules\\@babel\\helper-validator-identifier\\LICENSE"
   },
-  "@babel/parser@7.12.5": {
+  "@babel/parser@7.12.7": {
     "licenses": "MIT",
     "repository": "https://github.com/babel/babel",
     "publisher": "Sebastian McKenzie",
@@ -13,7 +13,7 @@
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babel\\parser",
     "licenseFile": "node_modules\\@babel\\parser\\LICENSE"
   },
-  "@babel/types@7.12.6": {
+  "@babel/types@7.12.7": {
     "licenses": "MIT",
     "repository": "https://github.com/babel/babel",
     "publisher": "Sebastian McKenzie",
@@ -63,6 +63,13 @@
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\serializers",
     "licenseFile": "node_modules\\@babylonjs\\serializers\\readme.md"
   },
+  "@tabler/icons@1.37.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tabler/tabler-icons",
+    "publisher": "codecalm",
+    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@tabler\\icons",
+    "licenseFile": "node_modules\\@tabler\\icons\\LICENSE"
+  },
   "@types/hoist-non-react-statics@3.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
@@ -81,42 +88,42 @@
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@types\\react",
     "licenseFile": "node_modules\\@types\\react\\LICENSE"
   },
-  "@vue/compiler-core@3.0.2": {
+  "@vue/compiler-core@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\compiler-core",
     "licenseFile": "node_modules\\@vue\\compiler-core\\LICENSE"
   },
-  "@vue/compiler-dom@3.0.2": {
+  "@vue/compiler-dom@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\compiler-dom",
     "licenseFile": "node_modules\\@vue\\compiler-dom\\LICENSE"
   },
-  "@vue/reactivity@3.0.2": {
+  "@vue/reactivity@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\reactivity",
     "licenseFile": "node_modules\\@vue\\reactivity\\LICENSE"
   },
-  "@vue/runtime-core@3.0.2": {
+  "@vue/runtime-core@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\runtime-core",
     "licenseFile": "node_modules\\@vue\\runtime-core\\LICENSE"
   },
-  "@vue/runtime-dom@3.0.2": {
+  "@vue/runtime-dom@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@vue\\runtime-dom",
     "licenseFile": "node_modules\\@vue\\runtime-dom\\LICENSE"
   },
-  "@vue/shared@3.0.2": {
+  "@vue/shared@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
@@ -141,7 +148,7 @@
     "repository": "https://github.com/BabylonJS/Babylon.js",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\babylonjs-gltf2interface"
   },
-  "csstype@2.6.13": {
+  "csstype@2.6.14": {
     "licenses": "MIT",
     "repository": "https://github.com/frenic/csstype",
     "publisher": "Fredrik Nicol",
@@ -380,12 +387,6 @@
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\symbol-observable",
     "licenseFile": "node_modules\\symbol-observable\\license"
   },
-  "tabler-icons@1.35.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/tabler/tabler-icons",
-    "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\tabler-icons",
-    "licenseFile": "node_modules\\tabler-icons\\LICENSE"
-  },
   "to-fast-properties@2.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/sindresorhus/to-fast-properties",
@@ -402,19 +403,19 @@
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\tslib",
     "licenseFile": "node_modules\\tslib\\LICENSE.txt"
   },
-  "vue-router@4.0.0-rc.5": {
+  "vue-router@4.0.1": {
     "licenses": "MIT",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\vue-router",
     "licenseFile": "node_modules\\vue-router\\LICENSE"
   },
-  "vue@3.0.2": {
+  "vue@3.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vue-next",
     "publisher": "Evan You",
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\vue",
     "licenseFile": "node_modules\\vue\\README.md"
   },
-  "vuex@4.0.0-rc.1": {
+  "vuex@4.0.0-rc.2": {
     "licenses": "MIT",
     "repository": "https://github.com/vuejs/vuex",
     "publisher": "Evan You",
