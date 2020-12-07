@@ -409,19 +409,19 @@ div.kifu {
 </style>
 
 <script lang="ts">
-import iconCaretLeftRaw from "!!raw-loader!tabler-icons/icons/caret-left.svg";
-import iconChevronsLeftRaw from "!!raw-loader!tabler-icons/icons/chevrons-left.svg";
-import iconArrowBarToLeftRaw from "!!raw-loader!tabler-icons/icons/arrow-bar-to-left.svg";
-import iconCaretRightRaw from "!!raw-loader!tabler-icons/icons/caret-right.svg";
-import iconChevronsRightRaw from "!!raw-loader!tabler-icons/icons/chevrons-right.svg";
-import iconArrowBarToRightRaw from "!!raw-loader!tabler-icons/icons/arrow-bar-to-right.svg";
-import iconRotateRaw from "!!raw-loader!tabler-icons/icons/rotate.svg";
-import iconTwitterRaw from "!!raw-loader!tabler-icons/icons/brand-twitter.svg";
-import iconCopyRaw from "!!raw-loader!tabler-icons/icons/copy.svg";
-import iconDownloadRaw from "!!raw-loader!tabler-icons/icons/download.svg";
-import iconLogoutRaw from "!!raw-loader!tabler-icons/icons/logout.svg";
-import iconLinkRaw from "!!raw-loader!tabler-icons/icons/link.svg";
-import iconBrushRaw from "!!raw-loader!tabler-icons/icons/brush.svg";
+import iconCaretLeftRaw from "!!raw-loader!@tabler/icons/icons/caret-left.svg";
+import iconChevronsLeftRaw from "!!raw-loader!@tabler/icons/icons/chevrons-left.svg";
+import iconArrowBarToLeftRaw from "!!raw-loader!@tabler/icons/icons/arrow-bar-to-left.svg";
+import iconCaretRightRaw from "!!raw-loader!@tabler/icons/icons/caret-right.svg";
+import iconChevronsRightRaw from "!!raw-loader!@tabler/icons/icons/chevrons-right.svg";
+import iconArrowBarToRightRaw from "!!raw-loader!@tabler/icons/icons/arrow-bar-to-right.svg";
+import iconRotateRaw from "!!raw-loader!@tabler/icons/icons/rotate.svg";
+import iconTwitterRaw from "!!raw-loader!@tabler/icons/icons/brand-twitter.svg";
+import iconCopyRaw from "!!raw-loader!@tabler/icons/icons/copy.svg";
+import iconDownloadRaw from "!!raw-loader!@tabler/icons/icons/download.svg";
+import iconLogoutRaw from "!!raw-loader!@tabler/icons/icons/logout.svg";
+import iconLinkRaw from "!!raw-loader!@tabler/icons/icons/link.svg";
+import iconBrushRaw from "!!raw-loader!@tabler/icons/icons/brush.svg";
 import { JKFPlayer } from "json-kifu-format";
 import { IMoveFormat } from "json-kifu-format/dist/src/Formats";
 import { defineComponent, reactive, SetupContext, watch } from "vue";

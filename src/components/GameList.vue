@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, VNode, reactive, h, SetupContext, watch } from "vue";
 import { RouterLink } from "vue-router";
-import iconLinkRaw from "!!raw-loader!tabler-icons/icons/link.svg";
+import iconLinkRaw from "!!raw-loader!@tabler/icons/icons/link.svg";
 import { getKifuOrgUrl, fetchGameListMirrorUrl } from "@/modules/kifuurl";
 
 type GameObjType = {
