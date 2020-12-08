@@ -161,6 +161,16 @@
     "noturn": true
   },
   {
+    "id": "SHAPE_IKKENBISHA_L",
+    "name": {
+      "ja_JP": "左一間飛車"
+    },
+    "moves": [
+      "R*2h9h"
+    ],
+    "tesuu_max": 20
+  },
+  {
     "id": "SHAPE_MUKAIBISHA",
     "name": {
       "ja_JP": "向かい飛車"
@@ -217,6 +227,16 @@
     },
     "moves": [
       "R*2h3h"
+    ],
+    "tesuu_max": 20
+  },
+  {
+    "id": "SHAPE_IKKENBISHA_R",
+    "name": {
+      "ja_JP": "右一間飛車"
+    },
+    "moves": [
+      "R*2h1h"
     ],
     "tesuu_max": 20
   },
