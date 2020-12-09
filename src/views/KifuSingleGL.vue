@@ -6,7 +6,6 @@
         :gameid="data.gameid"
         :gamename="getGameName(data.gameid)"
         @change-game="changeGame"
-        @game-info="recvGameInfo"
       />
     </div>
     <div class="kifugl">
@@ -104,17 +103,6 @@ export default defineComponent({
       ];
       router.push(`/3d/${msg.tournament}/${msg.gameid}`);
     };
-    const recvGameInfo = (msg: {
-      tournament: string;
-      gameid: string;
-      gamename: string;
-    }) => {
-      [data.tournament, data.gameid, data.gamename] = [
-        msg.tournament,
-        msg.gameid,
-        msg.gamename,
-      ];
-    };
     const changePly = (msg: {
       tournament: string;
       gameid: string;
@@ -145,7 +133,6 @@ export default defineComponent({
       getGameName,
       changeGame,
       changePly,
-      recvGameInfo,
     };
   },
   components: {

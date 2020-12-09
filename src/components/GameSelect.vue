@@ -54,11 +54,6 @@ export default defineComponent({
         gameid: data.gameId,
         gamename: data.gameName,
       });
-      ctx.emit("game-info", {
-        tournament: props.tournament,
-        gameid: data.gameId,
-        gamename: data.gameName,
-      });
     };
     const changeGameEvent = (event: Event) => {
       if (
