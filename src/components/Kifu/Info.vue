@@ -36,10 +36,12 @@ export default defineComponent({
       Object.entries({
         ...player.kifu.header,
         ...timeMan,
-      }).reduce(
-        (p, [key, value]) => [...p, h("dt", {}, key), h("dd", {}, value)],
-        [] as VNode[]
-      )
+      })
+        .filter(([key]) => key !== "棋戦")
+        .reduce(
+          (p, [key, value]) => [...p, h("dt", {}, key), h("dd", {}, value)],
+          [] as VNode[]
+        )
     );
   },
 });
