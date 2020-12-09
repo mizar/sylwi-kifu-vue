@@ -21,7 +21,7 @@ export default defineComponent({
   },
   setup(props, ctx: SetupContext) {
     const store = useStore();
-    if (props.tournament.startsWith("dr")) {
+    if (props.tournament.startsWith("dr") && props.gameid.includes("+buoy_")) {
       store.dispatch("shogiServer/fetchBuoy", { tournament: props.tournament });
     }
     return {
