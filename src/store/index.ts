@@ -12,7 +12,9 @@ export default createStore({
       namespaced: true,
       state: () => ({
         gameList: {},
+        listCheckTime: {},
         buoyTable: {},
+        buoyCheckTime: {},
         csa: {},
       }),
       getters: {
@@ -31,9 +33,13 @@ export default createStore({
         getListJson: (state) => (tournament: string) => {
           return state.gameList[tournament]?.listjson;
         },
+        getListCheckTime: (state) => (tournament: string): number =>
+          state.listCheckTime[tournament] ?? 0,
         getRawBuoy: (state) => (tournament: string) => {
           return state.buoyTable[tournament]?.raw;
         },
+        getBuoyCheckTime: (state) => (tournament: string): number =>
+          state.buoyCheckTime[tournament] ?? 0,
         getBuoy: (state) => (tournament: string, buoyid: string) => {
           const f: string[][] = state.buoyTable[tournament]?.table.filter(
             (line: string[]) => line[0] === buoyid
@@ -114,6 +120,12 @@ export default createStore({
             updated: new Date().valueOf(),
           };
         },
+        mutListCheckTime(state, { tournament, time }) {
+          state.listCheckTime[tournament] = time;
+        },
+        mutBuoyCheckTime(state, { tournament, time }) {
+          state.buoyCheckTime[tournament] = time;
+        },
         mutBuoy(state, { tournament, rawbuoy }) {
           state.buoyTable[tournament] = {
             raw: rawbuoy,
@@ -130,7 +142,18 @@ export default createStore({
         },
       },
       actions: {
-        async fetchList({ commit }, { tournament }: { tournament: string }) {
+        async fetchList(
+          { commit, getters },
+          { tournament }: { tournament: string }
+        ) {
+          // 50秒以内には再取得を試みない
+          const fetchTime = new Date().valueOf();
+          const lastCheckTime = getters.getListCheckTime(tournament);
+          if (fetchTime >= lastCheckTime && fetchTime < lastCheckTime + 50000) {
+            return;
+          }
+          commit("mutListCheckTime", { tournament, time: fetchTime });
+          // fetch実行
           fetch(fetchGameListMirrorUrl(tournament))
             .then((response) => {
               if (!response.ok) {
@@ -146,7 +169,18 @@ export default createStore({
               commit("mutList", { tournament, rawlist });
             });
         },
-        async fetchBuoy({ commit }, { tournament }: { tournament: string }) {
+        async fetchBuoy(
+          { commit, getters },
+          { tournament }: { tournament: string }
+        ) {
+          // 50秒以内には再取得を試みない
+          const fetchTime = new Date().valueOf();
+          const lastCheckTime = getters.getBuoyCheckTime(tournament);
+          if (fetchTime >= lastCheckTime && fetchTime < lastCheckTime + 50000) {
+            return;
+          }
+          commit("mutBuoyCheckTime", { tournament, time: fetchTime });
+          // fetch実行
           fetch(fetchGameBuoyTableUrl(tournament))
             .then(async (response) => {
               if (!response.ok) {
