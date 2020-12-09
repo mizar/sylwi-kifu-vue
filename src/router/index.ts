@@ -7,7 +7,6 @@ import KifuSingle from "@/views/KifuSingle.vue";
 import KifuMulti from "@/views/KifuMulti.vue";
 import About from "@/views/About.vue";
 import Castle from "@/views/Castle.vue";
-import Test from "@/views/Test.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,11 +23,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/castle",
     name: "Castle",
     component: Castle,
-  },
-  {
-    path: "/test",
-    name: "Test",
-    component: Test,
   },
   {
     path: "/3d/:tournament([\\w.+-]+)",
