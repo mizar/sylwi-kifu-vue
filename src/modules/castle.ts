@@ -297,7 +297,10 @@ export type TagRet = {
 };
 export type TagsRet = TagRet[];
 
-export const getTags = (player: JKFPlayer): TagsRet =>
+export const getTags = (
+  player: JKFPlayer,
+  args?: { buoy?: string[] }
+): TagsRet =>
   player.kifu.moves.reduce<
     {
       id: string;
@@ -316,6 +319,10 @@ export const getTags = (player: JKFPlayer): TagsRet =>
       tesuu_max: number;
       hide?: boolean;
       tesuu: number;
+      buoy_id?: string;
+      buoy_name?: string;
+      buoy_comment?: string;
+      buoy_poem?: string;
     }[]
   >((p, v, i) => {
     player.goto(i);
@@ -403,14 +410,22 @@ export const getTags = (player: JKFPlayer): TagsRet =>
       if (i === 0) {
         const _buoy = comment.match(/^buoy game starting with ([0-9]+) moves$/);
         if (_buoy) {
+          const buoy_entry = args?.buoy ?? [];
+          const buoy_name = `指定局面:${
+            buoy_entry.length > 1 ? buoy_entry[1] : "???"
+          }`;
           p.push({
             id: "BUOY",
             name: {
-              ja_JP: "指定局面",
+              ja_JP: buoy_name,
               en_US: "BUOY",
             },
             tesuu_max: 1e9,
             tesuu: +_buoy[1],
+            buoy_id: buoy_entry.length > 0 ? buoy_entry[0] : undefined,
+            buoy_name: buoy_entry.length > 1 ? buoy_entry[1] : undefined,
+            buoy_comment: buoy_entry.length > 2 ? buoy_entry[2] : undefined,
+            buoy_poem: buoy_entry.length > 3 ? buoy_entry[3] : undefined,
           });
         }
       }

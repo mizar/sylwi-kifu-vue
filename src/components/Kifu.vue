@@ -15,6 +15,8 @@
     </div>
     <div v-if="data.activated">
       <TagBar
+        :tournament="props.tournament"
+        :gameid="props.gameid"
         :jkfstr="data.jkfstr"
         @tesuu-change="tesuuChange"
         v-if="!props.hideTags"

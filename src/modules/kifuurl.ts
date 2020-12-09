@@ -46,3 +46,11 @@ export const fetchGameListOrgUrl = (tournament: string): string => {
     ? "http://wdoor.c.u-tokyo.ac.jp/shogi/LATEST/shogi-server.log"
     : `https://golan.sakura.ne.jp/denryusen/${tournament}/kifulist.txt`;
 };
+
+export const fetchGameBuoyTableUrl = (tournament: string): string => {
+  return tournament === "floodgate"
+    ? ""
+    : window.location.host === "golan.sakura.ne.jp"
+    ? `https://golan.sakura.ne.jp/denryusen/${tournament}/bookname_table_utf.txt`
+    : `https://p.mzr.jp/denryusen/${tournament}/bookname_table_utf.txt`;
+};

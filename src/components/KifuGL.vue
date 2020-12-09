@@ -2,6 +2,8 @@
   <div class="stage">
     <TagBar
       class="tags"
+      :tournament="props.tournament"
+      :gameid="props.gameid"
       :jkfstr="data.jkfstr"
       @tesuu-change="tesuuChange"
       v-if="!props.hideTags"
