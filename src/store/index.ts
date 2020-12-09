@@ -4,7 +4,6 @@ import {
   getKifuMirrorUrl,
 } from "@/modules/kifuurl";
 import { JKFPlayer } from "json-kifu-format";
-import { resolve } from "path";
 import { createStore } from "vuex";
 
 export default createStore({
