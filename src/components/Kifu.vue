@@ -411,6 +411,18 @@ div.kifu {
 </style>
 
 <script lang="ts">
+import { defineComponent, reactive, SetupContext, watch } from "vue";
+import { useStore } from "vuex";
+import { JKFPlayer } from "json-kifu-format";
+import { IMoveFormat } from "json-kifu-format/dist/src/Formats";
+import { getKifuMirrorUrl, getKifuOrgUrl } from "@/modules/kifuurl";
+import { toPackedSfenWeb } from "@/modules/psfenw";
+import ScoreGraph from "@/modules/scoregraph";
+import TagBar from "@/components/TagBar.vue";
+import Info from "@/components/Kifu/Info.vue";
+import Ban from "@/components/Kifu/Ban.vue";
+import Mochi from "@/components/Kifu/Mochi.vue";
+import TesuuSel from "@/components/Kifu/TesuuSel.vue";
 import iconCaretLeftRaw from "!!raw-loader!@tabler/icons/icons/caret-left.svg";
 import iconChevronsLeftRaw from "!!raw-loader!@tabler/icons/icons/chevrons-left.svg";
 import iconArrowBarToLeftRaw from "!!raw-loader!@tabler/icons/icons/arrow-bar-to-left.svg";
@@ -424,17 +436,6 @@ import iconDownloadRaw from "!!raw-loader!@tabler/icons/icons/download.svg";
 import iconLogoutRaw from "!!raw-loader!@tabler/icons/icons/logout.svg";
 import iconLinkRaw from "!!raw-loader!@tabler/icons/icons/link.svg";
 import iconBrushRaw from "!!raw-loader!@tabler/icons/icons/brush.svg";
-import { JKFPlayer } from "json-kifu-format";
-import { IMoveFormat } from "json-kifu-format/dist/src/Formats";
-import { defineComponent, reactive, SetupContext, watch } from "vue";
-import { getKifuMirrorUrl, getKifuOrgUrl } from "@/modules/kifuurl";
-import ScoreGraph from "@/modules/scoregraph";
-import TagBar from "@/components/TagBar.vue";
-import Info from "@/components/Kifu/Info.vue";
-import Ban from "@/components/Kifu/Ban.vue";
-import Mochi from "@/components/Kifu/Mochi.vue";
-import TesuuSel from "@/components/Kifu/TesuuSel.vue";
-import { toPackedSfenWeb } from "@/modules/psfenw";
 
 export default defineComponent({
   props: {
@@ -491,12 +492,12 @@ export default defineComponent({
       rotated: false,
       intervalId: 0,
       inGame: false,
-      needAutoFetch: true,
       hasClipboard: !!navigator?.clipboard,
       activated: false,
       updated: 0,
       showDiag: false,
     });
+    const store = useStore();
     const getPSfenWB64 = (): string => {
       const player = JKFPlayer.parseJKF(data.jkfstr);
       player.goto(data.tesuu);
@@ -570,77 +571,53 @@ export default defineComponent({
       data.tesuuMax = 0;
       data.tesuu = 0;
     };
-    const isInGame = (player: JKFPlayer) =>
-      !player.kifu.moves[player.kifu.moves.length - 1]?.comments?.some((s) =>
-        s.startsWith("$END_TIME:")
+    const updateData = () => {
+      const tournament = props.tournament;
+      const gameId = props.gameid;
+      const csa = store.getters["shogiServer/getRawCsa"](tournament, gameId);
+      const jkf = store.getters["shogiServer/getJkf"](tournament, gameId);
+      const tesuuMax = store.getters["shogiServer/getTesuuMax"](
+        tournament,
+        gameId
       );
+      const gameEnd = store.getters["shogiServer/getGameEnd"](
+        tournament,
+        gameId
+      );
+      const tesuu = Math.max(
+        Math.min(Number.isNaN(data.ply) ? Infinity : data.ply, tesuuMax),
+        0
+      );
+      [
+        data.kifustr,
+        data.error,
+        data.inGame,
+        data.tesuuMax,
+        data.jkfstr,
+        data.tesuu,
+        data.activated,
+      ] = [csa, "", !gameEnd, tesuuMax, jkf, tesuu, true];
+      setTimeout(() => {
+        // TesuuSel用の遅延更新呼び出し
+        data.updated = new Date().valueOf();
+      }, 0);
+    };
+    updateData();
     const loadKifu = () => {
       const tournament = props.tournament;
-      const gameid = props.gameid;
-      if (!tournament || !gameid) {
+      const gameId = props.gameid;
+      if (!tournament || !gameId) {
         return;
       }
-      data.needAutoFetch = true;
-      fetch(getKifuurl())
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(
-              [
-                `Fetch Response was not ok : ${response.status} ${response.statusText}`,
-              ].join("\n")
-            );
-          }
-          return response.text();
-        })
-        .then((text) => {
-          if (props.tournament === tournament && props.gameid === gameid) {
-            const newPlayer = JKFPlayer.parseCSA(text);
-            const tesuuMax = newPlayer.kifu.moves.length - 1;
-            const tesuu = Math.max(
-              Math.min(Number.isNaN(data.ply) ? Infinity : data.ply, tesuuMax),
-              0
-            );
-            [
-              data.kifustr,
-              data.error,
-              data.inGame,
-              data.needAutoFetch,
-              data.tesuuMax,
-              data.jkfstr,
-              data.tesuu,
-              data.activated,
-            ] = [
-              text,
-              "",
-              isInGame(newPlayer),
-              isInGame(newPlayer),
-              tesuuMax,
-              newPlayer.toJKF(),
-              tesuu,
-              true,
-            ];
-          }
-        })
-        .then(() => {
-          // TesuuSel用の遅延更新呼び出し
-          data.updated = new Date().valueOf();
-        })
-        .catch((reason) => {
-          console.error(reason); // eslint-disable-line no-console
-          try {
-            data.error = `${new Date().toISOString()} ${reason}`;
-            data.activated = true;
-          } catch (e) {
-            console.error(e); // eslint-disable-line no-console
-          }
-        });
+      updateData();
+      store.dispatch("shogiServer/fetchCsa", {
+        tournament,
+        gameId,
+        callback: updateData,
+      });
     };
     data.intervalId = window.setInterval(
-      () => {
-        if (data.needAutoFetch || data.inGame) {
-          loadKifu();
-        }
-      },
+      loadKifu,
       props.tournament === "floodgate" ? 5000 : 1000
     );
     const moveToReadableKifu = (mv: IMoveFormat): string => {

@@ -55,6 +55,18 @@ export default createStore({
             `{"header":{},"moves":[{}]}`
           );
         },
+        getTesuuMax: (state) => (
+          tournament: string,
+          gameId: string
+        ): boolean => {
+          return state.csa[`${tournament}/${gameId}`]?.tesuuMax ?? 0;
+        },
+        getGameEnd: (state) => (
+          tournament: string,
+          gameId: string
+        ): boolean => {
+          return state.csa[`${tournament}/${gameId}`]?.gameEnd ?? false;
+        },
       },
       mutations: {
         mutList(state, { tournament, rawlist }) {
@@ -134,9 +146,14 @@ export default createStore({
           };
         },
         mutCsa(state, { tournament, gameId, csa }) {
+          const player = JKFPlayer.parseCSA(csa);
           state.csa[`${tournament}/${gameId}`] = {
             csa,
-            jkf: JKFPlayer.parseCSA(csa).toJKF(),
+            jkf: player.toJKF(),
+            tesuuMax: player.kifu.moves.length - 1,
+            gameEnd: player.kifu.moves[
+              player.kifu.moves.length - 1
+            ]?.comments?.some((s) => s.startsWith("$END_TIME:")),
             updated: new Date().valueOf(),
           };
         },
@@ -144,7 +161,13 @@ export default createStore({
       actions: {
         async fetchList(
           { commit, getters },
-          { tournament }: { tournament: string }
+          {
+            tournament,
+            callback,
+          }: {
+            tournament: string;
+            callback?: () => void;
+          }
         ) {
           // 50秒以内には再取得を試みない
           const fetchTime = new Date().valueOf();
@@ -167,11 +190,18 @@ export default createStore({
             })
             .then((rawlist) => {
               commit("mutList", { tournament, rawlist });
+              callback?.();
             });
         },
         async fetchBuoy(
           { commit, getters },
-          { tournament }: { tournament: string }
+          {
+            tournament,
+            callback,
+          }: {
+            tournament: string;
+            callback?: () => void;
+          }
         ) {
           // 50秒以内には再取得を試みない
           const fetchTime = new Date().valueOf();
@@ -203,12 +233,24 @@ export default createStore({
             })
             .then((rawbuoy) => {
               commit("mutBuoy", { tournament, rawbuoy });
+              callback?.();
             });
         },
         async fetchCsa(
-          { commit },
-          { tournament, gameId }: { tournament: string; gameId: string }
+          { commit, getters },
+          {
+            tournament,
+            gameId,
+            callback,
+          }: {
+            tournament: string;
+            gameId: string;
+            callback?: () => void;
+          }
         ) {
+          if (getters.getGameEnd(tournament, gameId)) {
+            return;
+          }
           fetch(getKifuMirrorUrl(tournament, gameId))
             .then((response) => {
               if (!response.ok) {
@@ -222,6 +264,7 @@ export default createStore({
             })
             .then((csa) => {
               commit("mutCsa", { tournament, gameId, csa });
+              callback?.();
             });
         },
       },
