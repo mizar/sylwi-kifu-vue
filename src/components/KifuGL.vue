@@ -578,11 +578,14 @@ export default defineComponent({
           }
         });
     };
-    data.intervalId = window.setInterval(() => {
-      if (data.needAutoFetch || data.inGame) {
-        loadKifu();
-      }
-    }, 1000);
+    data.intervalId = window.setInterval(
+      () => {
+        if (data.needAutoFetch || data.inGame) {
+          loadKifu();
+        }
+      },
+      props.tournament === "floodgate" ? 5000 : 1000
+    );
     const moveToReadableKifu = (mv: IMoveFormat): string => {
       return JKFPlayer.moveToReadableKifu(mv);
     };
