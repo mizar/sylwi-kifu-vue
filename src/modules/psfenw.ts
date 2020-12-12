@@ -1,6 +1,9 @@
 import { Shogi, Color, Piece } from "shogi.js";
 import { IMoveMoveFormat } from "json-kifu-format/dist/src/Formats";
 
+// TypeScriptでの psfenw (PackedSfenWeb-base64url) エンコーダ/デコーダ実装例
+// PHPでのデコーダ実装例は public/psfenw.php
+
 /*
 
 # packedsfen-web

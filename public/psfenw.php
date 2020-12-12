@@ -1,5 +1,8 @@
 <?php
 
+// PHPでの psfenw (PackedSfenWeb-base64url) デコーダ実装例
+// TypeScriptでのエンコーダ/デコーダ実装例は src/modules/psfenw.ts
+
 /*
 
 # packedsfen-web
