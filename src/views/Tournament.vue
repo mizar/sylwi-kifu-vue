@@ -22,16 +22,17 @@
           path: data.linkKifuMulti,
           query: { lt: 3540, ln: 50 },
         }"
+        replace
         >⇒ 盤面複数表示(最新59分,最大50件)</router-link
       >
     </p>
     <p>
-      <router-link :to="{ path: data.linkKifuMulti }"
+      <router-link :to="{ path: data.linkKifuMulti }" replace
         >⇒ 盤面複数表示(全棋譜)</router-link
       >
     </p>
     <p>
-      <router-link :to="{ path: data.linkKifuMulti, query: { s: 1 } }"
+      <router-link :to="{ path: data.linkKifuMulti, query: { s: 1 } }" replace
         >⇒ 盤面複数表示(全棋譜,軽量)</router-link
       >
     </p>

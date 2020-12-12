@@ -185,6 +185,7 @@ export default defineComponent({
                     to: `${this.props.gl ? `/3d` : ``}/${tournament}/${
                       gameObj.gameId
                     }`,
+                    replace: true,
                   },
                   { default: () => gameObj.gameName }
                 ),
