@@ -158,7 +158,7 @@ export default defineComponent({
     });
     const router = useRouter();
     const changeGame = (msg: { tournament: string; gameid: string }) => {
-      router.push(`/${msg.tournament}/${msg.gameid}`);
+      router.replace(`/${msg.tournament}/${msg.gameid}`);
     };
     return {
       props,
@@ -167,7 +167,7 @@ export default defineComponent({
       changeGame,
       changeQuery: (newprops: Partial<typeof props>): void => {
         const p = Object.assign({}, props, newprops);
-        router.push({
+        router.replace({
           name: "KifuMulti",
           params: {
             tournament: p.tournament,

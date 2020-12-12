@@ -86,7 +86,7 @@ export default defineComponent({
         msg.gamename,
         NaN,
       ];
-      router.push(`/${msg.tournament}/${msg.gameid}`);
+      router.replace(`/${msg.tournament}/${msg.gameid}`);
     };
     const changePly = (msg: {
       tournament: string;
@@ -98,7 +98,7 @@ export default defineComponent({
         msg.gameid,
         msg.ply,
       ];
-      router.push(
+      router.replace(
         `/${msg.tournament}/${msg.gameid}/${isNaN(msg.ply) ? `` : msg.ply}`
       );
     };
