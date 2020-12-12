@@ -643,7 +643,8 @@ export default defineComponent({
             ? `&hashtags=${encodeURIComponent(tweetProp.hashtags)}`
             : ""
         }${tweetProp.via ? `&via=${encodeURIComponent(tweetProp.via)}` : ""}`,
-        "_blank"
+        "_blank",
+        "noopener=yes"
       );
     };
     const doDiag = () => {

@@ -13,6 +13,7 @@
             : `https://golan.sakura.ne.jp/denryusen/${props.tournament}/dr1_live.php`
         "
         target="_blank"
+        rel="noopener"
         >⇒ 棋戦サイト</a
       >
     </p>
