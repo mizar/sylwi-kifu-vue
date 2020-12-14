@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, VNode, h } from "vue";
-import { Piece } from "shogi.js";
+import { Piece, Color } from "shogi.js";
 import { JKFPlayer } from "json-kifu-format";
 import { getUrl } from "@/assets/pieces/PieceImage";
 
@@ -33,6 +33,7 @@ export default defineComponent({
     player.goto(this.props.tesuu);
     const side = this.props.side;
     const rotated = this.props.rotated;
+    const color = rotated ? 1 - side : side;
     const mv =
       player.getMove() ??
       (player.tesuu > 0
@@ -82,6 +83,70 @@ export default defineComponent({
           )
         : null;
     };
+    const getPoint = (c: Color) =>
+      player.shogi.board
+        .map((l) =>
+          l
+            .map((p, r) => {
+              const kind = p?.kind;
+              if (
+                (c === Color.Black && r >= 3) ||
+                (c === Color.White && r < 6) ||
+                p?.color !== c ||
+                !kind
+              ) {
+                return 0;
+              }
+              switch (kind) {
+                case "OU":
+                  return 0;
+                case "HI":
+                case "KA":
+                case "UM":
+                case "RY":
+                  return 5;
+                default:
+                  return 1;
+              }
+            })
+            .reduce<number>((p, c) => p + c, 0)
+        )
+        .reduce((p, c) => p + c, 0) +
+      ((c: Color) => {
+        const hands = player.shogi.getHandsSummary(c);
+        let p = 0;
+        ["FU", "KY", "KE", "GI", "KI"].forEach((kind) => {
+          p += hands[kind];
+        });
+        ["KA", "HI"].forEach((kind) => {
+          p += hands[kind] * 5;
+        });
+        return p;
+      })(c);
+    const getPieces = (c: Color) =>
+      player.shogi.board
+        .map((l) =>
+          l
+            .map((p, r) => {
+              const kind = p?.kind;
+              if (
+                (c === Color.Black && r >= 3) ||
+                (c === Color.White && r < 6) ||
+                p?.color !== c ||
+                !kind
+              ) {
+                return 0;
+              }
+              switch (kind) {
+                case "OU":
+                  return 0;
+                default:
+                  return 1;
+              }
+            })
+            .reduce<number>((p, c) => p + c, 0)
+        )
+        .reduce((p, c) => p + c, 0);
     return h(
       "div",
       {
@@ -101,12 +166,19 @@ export default defineComponent({
         ),
         h(
           "div",
+          {
+            className: "points",
+          },
+          `${getPoint(color)}点${getPieces(color)}枚`
+        ),
+        h(
+          "div",
           { className: "mochimain" },
           [
             ["HI", "KA", "KI", "GI", "KE", "KY", "FU"],
             ["FU", "KY", "KE", "GI", "KI", "KA", "HI"],
           ][side]
-            .map((kind) => handPieces(kind, rotated ? 1 - side : side, side))
+            .map((kind) => handPieces(kind, color, side))
             .reduce((p, c) => (c ? [...p, c] : p), [] as VNode[])
         ),
       ]

@@ -257,6 +257,10 @@ div.kifu {
             word-wrap: break-word;
             overflow-wrap: break-word;
           }
+          .points {
+            text-align: center;
+            background-color: #ddd;
+          }
           .mochimain {
             width: 100%;
             height: 152px;
