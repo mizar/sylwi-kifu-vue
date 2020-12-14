@@ -1,5 +1,8 @@
 <template>
-  <div class="kifu">
+  <div
+    class="kifu"
+    v-if="!props.disableNonGame || data.tesuuMax > data.buoyTesuu"
+  >
     <div class="kifuheader">
       <div class="gamename">
         <button
@@ -39,7 +42,7 @@
           :class="
             props.lightEnd ||
             (data.tesuuMax > 0 && data.inGame) ||
-            data.tesuu < data.tesuuMax
+            (data.tesuu < data.tesuuMax && data.tesuu > data.buoyTesuu)
               ? `banset`
               : `banset end`
           "
@@ -482,12 +485,18 @@ export default defineComponent({
       required: false,
       default: () => false,
     },
+    disableNonGame: {
+      type: Boolean,
+      required: false,
+      default: () => false,
+    },
   },
   setup(props, ctx: SetupContext) {
     const data = reactive({
       jkfstr: `{"header":{},"moves":[{}]}`,
       tesuu: 0,
       tesuuMax: 0,
+      buoyTesuu: 0,
       kifustr: "",
       ply: props.ply,
       error: "",
@@ -582,6 +591,10 @@ export default defineComponent({
         tournament,
         gameId
       );
+      const buoyTesuu = store.getters["shogiServer/getBuoyTesuu"](
+        tournament,
+        gameId
+      );
       const gameEnd = store.getters["shogiServer/getGameEnd"](
         tournament,
         gameId
@@ -595,10 +608,11 @@ export default defineComponent({
         data.error,
         data.inGame,
         data.tesuuMax,
+        data.buoyTesuu,
         data.jkfstr,
         data.tesuu,
         data.activated,
-      ] = [csa, "", !gameEnd, tesuuMax, jkf, tesuu, true];
+      ] = [csa, "", !gameEnd, tesuuMax, buoyTesuu, jkf, tesuu, true];
       setTimeout(() => {
         // TesuuSel用の遅延更新呼び出し
         data.updated = new Date().valueOf();

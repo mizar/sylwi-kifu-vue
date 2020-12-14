@@ -55,6 +55,12 @@ export default createStore({
             `{"header":{},"moves":[{}]}`
           );
         },
+        getBuoyTesuu: (state) => (
+          tournament: string,
+          gameId: string
+        ): boolean => {
+          return state.csa[`${tournament}/${gameId}`]?.buoyTesuu ?? 0;
+        },
         getTesuuMax: (state) => (
           tournament: string,
           gameId: string
@@ -150,6 +156,14 @@ export default createStore({
           state.csa[`${tournament}/${gameId}`] = {
             csa,
             jkf: player.toJKF(),
+            buoyTesuu: +(
+              player.kifu.moves[0].comments
+                ?.map(
+                  (v) =>
+                    v.match(/^buoy game starting with ([0-9]+) moves$/)?.[1]
+                )
+                ?.filter((v) => v)?.[0] ?? 0
+            ),
             tesuuMax: player.kifu.moves.length - 1,
             gameEnd: player.kifu.moves[
               player.kifu.moves.length - 1

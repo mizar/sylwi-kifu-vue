@@ -6,7 +6,7 @@ div.boardset-container {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  div.boardset {
+  div.kifu {
     flex: 0 1 570px;
   }
   div.boardempty {
@@ -176,26 +176,18 @@ export default defineComponent({
         this.gameList
           .map((gameObj): VNode[] => {
             return [
-              h(
-                "div",
-                {
-                  className: "boardset",
-                  key: gameObj.gameId,
-                },
-                [
-                  h(Kifu, {
-                    tournament: tournament,
-                    gameid: gameObj.gameId,
-                    gamename: gameObj.gameName,
-                    ply: NaN,
-                    hideTags: this.props.hideTags,
-                    hideGraph: this.props.hideGraph,
-                    hideTools: this.props.hideTools,
-                    hideComments: this.props.hideComments,
-                    onChangePly: () => undefined,
-                  }),
-                ]
-              ),
+              h(Kifu, {
+                tournament: tournament,
+                gameid: gameObj.gameId,
+                gamename: gameObj.gameName,
+                ply: NaN,
+                hideTags: this.props.hideTags,
+                hideGraph: this.props.hideGraph,
+                hideTools: this.props.hideTools,
+                hideComments: this.props.hideComments,
+                disableNonGame: true,
+                onChangePly: () => undefined,
+              }),
             ];
           })
           .reduce((p, c) => [...p, ...c], [] as VNode[]),
