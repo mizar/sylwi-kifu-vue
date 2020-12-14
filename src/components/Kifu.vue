@@ -41,8 +41,11 @@
         <div
           :class="
             props.lightEnd ||
-            (data.tesuuMax > 0 && data.inGame) ||
-            (data.tesuu < data.tesuuMax && data.tesuu > data.buoyTesuu)
+            (data.tesuuMax > data.buoyTesuu &&
+              data.tesuu >= Math.max(data.buoyTesuu, 1) &&
+              data.inGame) ||
+            (data.tesuu < data.tesuuMax &&
+              data.tesuu >= Math.max(data.buoyTesuu, 1))
               ? `banset`
               : `banset end`
           "
