@@ -6,8 +6,8 @@
         <router-link to="/about" replace>About</router-link> |
         <router-link to="/floodgate" replace>Floodgate</router-link> /
         <router-link to="/3d/floodgate" replace>(3D)</router-link> |
-        <router-link to="/dr1_tsec_t1" replace>電竜戦TSEC予行1</router-link> /
-        <router-link to="/3d/dr1_tsec_t1" replace>(3D)</router-link> |
+        <router-link to="/dr1_tsec_p1" replace>電竜戦TSEC予選</router-link> /
+        <router-link to="/3d/dr1_tsec_p1" replace>(3D)</router-link> |
         <router-link to="/dr1_production" replace>電竜戦</router-link> /
         <router-link to="/3d/dr1_production" replace>(3D)</router-link> |
       </p>

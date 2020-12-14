@@ -33,6 +33,10 @@
         <router-link to="/dr1_tsec_t1">電竜戦TSEC予行1</router-link> /
         <router-link to="/3d/dr1_tsec_t1">(3D)</router-link>
       </li>
+      <li>
+        <router-link to="/dr1_tsec_p1">電竜戦TSEC予選</router-link> /
+        <router-link to="/3d/dr1_tsec_p1">(3D)</router-link>
+      </li>
     </ul>
   </div>
 </template>
