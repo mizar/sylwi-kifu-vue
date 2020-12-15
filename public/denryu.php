@@ -44,6 +44,9 @@ body, iframe {
   border: 0;
 }
 </style>
+<script>
+window.location.href = "<?php echo $uri ?>/#/<?php echo urlencode($_GET["tn"]) ?>/<?php echo urlencode($_GET["gi"]) ?>/<?php echo $tesuu ?>";
+</script>
 </head>
 <body><iframe src="<?php echo $uri ?>/#/<?php echo urlencode($_GET["tn"]) ?>/<?php echo urlencode($_GET["gi"]) ?>/<?php echo $tesuu ?>"></iframe></body>
 </html>
