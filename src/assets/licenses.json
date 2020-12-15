@@ -63,7 +63,7 @@
     "path": "C:\\git\\sylwi-kifu-vue\\node_modules\\@babylonjs\\serializers",
     "licenseFile": "node_modules\\@babylonjs\\serializers\\readme.md"
   },
-  "@tabler/icons@1.37.0": {
+  "@tabler/icons@1.38.0": {
     "licenses": "MIT",
     "repository": "https://github.com/tabler/tabler-icons",
     "publisher": "codecalm",
