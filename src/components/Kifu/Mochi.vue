@@ -22,6 +22,10 @@ export default defineComponent({
       type: Boolean,
       required: true,
     },
+    forcepoint: {
+      typr: Boolean,
+      required: false,
+    },
   },
   setup(props) {
     return {
@@ -147,6 +151,18 @@ export default defineComponent({
             .reduce<number>((p, c) => p + c, 0)
         )
         .reduce((p, c) => p + c, 0);
+    const getEntered = (c: Color) =>
+      player.shogi.board.some((l) =>
+        l.some(
+          (p, r) =>
+            !(
+              (c === Color.Black && r >= 3) ||
+              (c === Color.White && r < 6) ||
+              p?.color !== c ||
+              p?.kind !== "OU"
+            )
+        )
+      );
     return h(
       "div",
       {
@@ -169,7 +185,9 @@ export default defineComponent({
           {
             className: "points",
           },
-          `${getPoint(color)}点${getPieces(color)}枚`
+          this.props.forcepoint || getEntered(color)
+            ? `${getPoint(color)}点${getPieces(color)}枚`
+            : ""
         ),
         h(
           "div",
