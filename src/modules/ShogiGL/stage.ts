@@ -561,7 +561,7 @@ export class StageSet {
 
     // cubemap読み込み
     const cubemap = new BABYLON.HDRCubeTexture(
-      require("file-loader!@/assets/cube/small_cathedral_1k.hdr"),
+      require("file-loader!@/assets/cube/small_cathedral_512.hdr"),
       scene,
       256,
       // reflection に roughness を適用するために mipmapはあった方が良い?
