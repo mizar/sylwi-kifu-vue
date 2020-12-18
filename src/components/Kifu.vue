@@ -140,13 +140,17 @@
         <div v-if="data.showDiag && props.tournament !== 'floodgate'">
           <img
             class="diag"
-            :src="`https://sylwi.mzr.jp/cimg_denryu.php?p=${getPSfenWB64()}`"
+            :src="`https://sylwi.mzr.jp/cimg_denryu.php?p=${getPSfenWB64()}&p1=${encodeURIComponent(
+              data.p1
+            )}&p2=${encodeURIComponent(data.p2)}`"
           />
         </div>
         <div v-if="data.showDiag && props.tournament === 'floodgate'">
           <img
             class="diag"
-            :src="`https://sylwi.mzr.jp/cimg_floodgate.php?p=${getPSfenWB64()}`"
+            :src="`https://sylwi.mzr.jp/cimg_floodgate.php?p=${getPSfenWB64()}&p1=${encodeURIComponent(
+              data.p1
+            )}&p2=${encodeURIComponent(data.p2)}`"
           />
         </div>
         <div v-if="!props.hideComments">
@@ -503,6 +507,7 @@ export default defineComponent({
       jkfstr: `{"header":{},"moves":[{}]}`,
       tesuu: 0,
       tesuuMax: 0,
+      buoyName: "",
       buoyTesuu: 0,
       kifustr: "",
       ply: props.ply,
@@ -514,6 +519,8 @@ export default defineComponent({
       activated: false,
       updated: 0,
       showDiag: false,
+      p1: "",
+      p2: "",
     });
     const store = useStore();
     const getPSfenWB64 = (): string => {
@@ -592,34 +599,40 @@ export default defineComponent({
     const updateData = () => {
       const tournament = props.tournament;
       const gameId = props.gameid;
-      const csa = store.getters["shogiServer/getRawCsa"](tournament, gameId);
-      const jkf = store.getters["shogiServer/getJkf"](tournament, gameId);
+      const buoyName =
+        gameId.match(/^[A-Za-z0-9_-]+\+buoy_([A-Za-z0-9.-]+)/)?.[1] ?? "";
       const tesuuMax = store.getters["shogiServer/getTesuuMax"](
         tournament,
         gameId
-      );
-      const buoyTesuu = store.getters["shogiServer/getBuoyTesuu"](
-        tournament,
-        gameId
-      );
-      const gameEnd = store.getters["shogiServer/getGameEnd"](
-        tournament,
-        gameId
-      );
-      const tesuu = Math.max(
-        Math.min(Number.isNaN(data.ply) ? Infinity : data.ply, tesuuMax),
-        0
       );
       [
         data.kifustr,
         data.error,
         data.inGame,
         data.tesuuMax,
+        data.buoyName,
         data.buoyTesuu,
         data.jkfstr,
         data.tesuu,
         data.activated,
-      ] = [csa, "", !gameEnd, tesuuMax, buoyTesuu, jkf, tesuu, true];
+        data.p1,
+        data.p2,
+      ] = [
+        store.getters["shogiServer/getRawCsa"](tournament, gameId),
+        "",
+        !store.getters["shogiServer/getGameEnd"](tournament, gameId),
+        tesuuMax,
+        store.getters["shogiServer/getBuoy"](tournament, buoyName)[1] ?? "",
+        store.getters["shogiServer/getBuoyTesuu"](tournament, gameId),
+        store.getters["shogiServer/getJkf"](tournament, gameId),
+        Math.max(
+          Math.min(Number.isNaN(data.ply) ? Infinity : data.ply, tesuuMax),
+          0
+        ),
+        true,
+        store.getters["shogiServer/getPlayer1"](tournament, gameId),
+        store.getters["shogiServer/getPlayer2"](tournament, gameId),
+      ];
       setTimeout(() => {
         // TesuuSel用の遅延更新呼び出し
         data.updated = new Date().valueOf();
@@ -690,12 +703,16 @@ export default defineComponent({
       const tweetProp =
         props.tournament === "floodgate"
           ? {
-              text: `${props.gamename} ${data.tesuu}手目 ${readableKifu}\n\n\n`,
+              text: `${data.buoyName ? `[${data.buoyName}] ` : ""}${
+                props.gamename
+              } ${data.tesuu}手目 ${readableKifu}\n\n\n`,
               url: new URL(
                 `./floodgate.php?tn=${props.tournament}&gi=${
                   props.gameid
                 }&p=${getPSfenWB64()}&gn=${encodeURIComponent(
                   props.gamename || ""
+                )}&p1=${encodeURIComponent(data.p1)}&p2=${encodeURIComponent(
+                  data.p2
                 )}`,
                 window.location.href
               ).href,
@@ -703,12 +720,16 @@ export default defineComponent({
               via: "",
             }
           : {
-              text: `${props.gamename} ${data.tesuu}手目 ${readableKifu}\n\n\n`,
+              text: `${data.buoyName ? `[${data.buoyName}] ` : ""}${
+                props.gamename
+              } ${data.tesuu}手目 ${readableKifu}\n\n\n`,
               url: new URL(
                 `./denryu.php?tn=${props.tournament}&gi=${
                   props.gameid
                 }&p=${getPSfenWB64()}&gn=${encodeURIComponent(
                   props.gamename || ""
+                )}&p1=${encodeURIComponent(data.p1)}&p2=${encodeURIComponent(
+                  data.p2
                 )}`,
                 window.location.href
               ).href,

@@ -230,6 +230,13 @@ if (!empty($moveStr)) {
   aligntext($im, 16, 0, $imxh + 320, 116, $bc, $font7, 'まで', 1, 1);
 }
 
+$p1 = $_GET['p1'];
+$p2 = $_GET['p2'];
+imagefilledrectangle($im, $imxh + 430, $imyh - 128, $imxh + 462, $imyh + 238, $wc);
+imagefilledrectangle($im, $imxh - 430, $imyh + 128, $imxh - 462, $imyh - 238, $wc);
+aligntext($im, 16, 90, $imxh + 446, $imyh + 238, $bc, $font7, '☗先手 '.$p1, 1, 2);
+aligntext($im, 16, -90, $imxh - 446, $imyh - 238, $bc, $font7, '☖後手 '.$p2, 1, 0);
+
 //$logo = imagecreatefromjpeg('img/denryu-sen-logo-small.jpg');
 //imagecopyresampled($im, $logo, 0, $imyh + 238 - ($imxh - 220) / 3, 0, 0, $imxh - 220, ($imxh - 220) / 3, 300, 100);
 

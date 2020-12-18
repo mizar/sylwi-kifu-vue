@@ -29,7 +29,7 @@ $uri = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST
 <meta property="og:title" content="第1回電竜戦 <?php echo htmlspecialchars($_GET["gn"]) ?> <?php echo $tesuuStr ?> <?php echo $mStr ?> まで"/>
 <meta property="og:description" content="第1回電竜戦 <?php echo htmlspecialchars($_GET["gn"]) ?> <?php echo $tesuuStr ?> <?php echo $mStr ?> まで"/>
 <meta property="og:site_name" content="電竜戦"/>
-<meta property="og:image" content="<?php echo $uri ?>/cimg_denryu.php?p=<?php echo htmlspecialchars($_GET["p"]) ?>"/>
+<meta property="og:image" content="<?php echo $uri ?>/cimg_denryu.php?p=<?php echo htmlspecialchars($_GET["p"]) ?>&p1=<?php echo htmlspecialchars($_GET["p1"]) ?>&p2=<?php echo htmlspecialchars($_GET["p2"]) ?>"/>
 <meta property="og:url" content="<?php echo $uri ?>/#/<?php echo urlencode($_GET["tn"]) ?>/<?php echo urlencode($_GET["gi"]) ?>/<?php echo $tesuu ?>"/>
 <meta property="og:locale" content="ja_JP"/>
 <meta property="og:type" content="article"/>

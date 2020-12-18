@@ -73,6 +73,18 @@ export default createStore({
         ): boolean => {
           return state.csa[`${tournament}/${gameId}`]?.gameEnd ?? false;
         },
+        getPlayer1: (state) => (
+          tournament: string,
+          gameId: string
+        ): string => {
+          return state.csa[`${tournament}/${gameId}`]?.p1 ?? "";
+        },
+        getPlayer2: (state) => (
+          tournament: string,
+          gameId: string
+        ): string => {
+          return state.csa[`${tournament}/${gameId}`]?.p2 ?? "";
+        },
       },
       mutations: {
         mutList(state, { tournament, rawlist }) {
@@ -169,6 +181,8 @@ export default createStore({
               player.kifu.moves.length - 1
             ]?.comments?.some((s) => s.startsWith("$END_TIME:")),
             updated: new Date().valueOf(),
+            p1: player.kifu.header.先手 ?? "",
+            p2: player.kifu.header.後手 ?? "",
           };
         },
       },

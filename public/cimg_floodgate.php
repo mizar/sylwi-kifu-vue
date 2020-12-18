@@ -230,6 +230,13 @@ if (!empty($moveStr)) {
   aligntext($im, 16, 0, $imxh + 320, 116, $bc, $font7, 'まで', 1, 1);
 }
 
+$p1 = $_GET['p1'];
+$p2 = $_GET['p2'];
+imagefilledrectangle($im, $imxh + 430, $imyh - 128, $imxh + 462, $imyh + 238, $wc);
+imagefilledrectangle($im, $imxh - 430, $imyh + 128, $imxh - 462, $imyh - 238, $wc);
+aligntext($im, 16, 90, $imxh + 446, $imyh + 238, $bc, $font7, '☗先手 '.$p1, 1, 2);
+aligntext($im, 16, -90, $imxh - 446, $imyh - 238, $bc, $font7, '☖後手 '.$p2, 1, 0);
+
 //imagesavealpha($im, true);
 imagepng($im);
 imagedestroy($im);

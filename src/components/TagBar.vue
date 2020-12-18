@@ -33,12 +33,10 @@ export default defineComponent({
     };
   },
   render() {
-    const buoymatch = this.props.gameid.match(
-      /^[A-Za-z0-9_-]+\+buoy_([A-Za-z0-9.-]+)/
-    );
     const buoyentry = this.store.getters["shogiServer/getBuoy"](
       this.props.tournament,
-      buoymatch ? buoymatch[1] : ""
+      this.props.gameid.match(/^[A-Za-z0-9_-]+\+buoy_([A-Za-z0-9.-]+)/)?.[1] ??
+        ""
     );
     return h(
       "div",
