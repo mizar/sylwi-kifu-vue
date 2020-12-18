@@ -37,6 +37,7 @@ const routes: Array<RouteRecordRaw> = [
       hideTools: route.query.tools === "0",
       hideComments: route.query.comments === "0",
       gameNameInclude: route.query.name,
+      gameIdInclude: route.query.id,
     }),
   },
   {
@@ -58,6 +59,7 @@ const routes: Array<RouteRecordRaw> = [
       hideTools: route.query.tools === "0",
       hideComments: route.query.comments === "0",
       gameNameInclude: route.query.name,
+      gameIdInclude: route.query.id,
     }),
   },
   {
@@ -73,6 +75,7 @@ const routes: Array<RouteRecordRaw> = [
       hideTools: route.query.tools === "0",
       hideComments: route.query.comments === "0",
       gameNameInclude: route.query.name,
+      gameIdInclude: route.query.id,
     }),
   },
   {

@@ -69,6 +69,9 @@
       <li v-if="props.tournament !== 'floodgate'">
         名前条件:
         <button @click="changeQuery({ gameNameInclude: '' })">none</button>
+        <button @click="changeQuery({ gameNameInclude: 'ファイナル' })">
+          ファイナル
+        </button>
         <button @click="changeQuery({ gameNameInclude: 'A級' })">A級</button>
         <button @click="changeQuery({ gameNameInclude: 'B級' })">B級</button>
         <button @click="changeQuery({ gameNameInclude: '初日' })">初日</button>
@@ -93,6 +96,7 @@
       :hideTools="props.hideTools"
       :hideComments="props.hideComments"
       :gameNameInclude="props.gameNameInclude"
+      :gameIdInclude="props.gameIdInclude"
     />
   </div>
 </template>
@@ -151,6 +155,11 @@ export default defineComponent({
       required: false,
       default: () => "",
     },
+    gameIdInclude: {
+      type: String,
+      required: false,
+      default: () => "",
+    },
   },
   setup(props) {
     const data = reactive({
@@ -188,7 +197,8 @@ export default defineComponent({
             p.hideGraph ? { graph: "0" } : {},
             p.hideTools ? { tools: "0" } : {},
             p.hideComments ? { comments: "0" } : {},
-            p.gameNameInclude ? { name: p.gameNameInclude } : {}
+            p.gameNameInclude ? { name: p.gameNameInclude } : {},
+            p.gameIdInclude ? { name: p.gameIdInclude } : {}
           ),
         });
       },

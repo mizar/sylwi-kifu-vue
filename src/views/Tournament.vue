@@ -47,6 +47,7 @@
       :hideTools="props.hideTools"
       :hideComments="props.hideComments"
       :gameNameInclude="props.gameNameInclude"
+      :gameIdInclude="props.gameIdInclude"
     />
     <GameList :tournament="props.tournament" />
   </div>
@@ -103,6 +104,11 @@ export default defineComponent({
       default: () => false,
     },
     gameNameInclude: {
+      type: String,
+      required: false,
+      default: () => "",
+    },
+    gameIdInclude: {
       type: String,
       required: false,
       default: () => "",

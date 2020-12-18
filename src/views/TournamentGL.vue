@@ -75,6 +75,11 @@ export default defineComponent({
       required: false,
       default: () => "",
     },
+    gameIdInclude: {
+      type: String,
+      required: false,
+      default: () => "",
+    },
   },
   setup(props) {
     const router = useRouter();

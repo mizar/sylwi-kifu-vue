@@ -67,6 +67,11 @@ export default defineComponent({
       required: false,
       default: () => "",
     },
+    gameIdInclude: {
+      type: String,
+      required: false,
+      default: () => "",
+    },
   },
   setup(props) {
     const data = reactive({
@@ -108,6 +113,11 @@ export default defineComponent({
       if (props.gameNameInclude) {
         _gameList = _gameList.filter(
           (e) => e.gameName.indexOf(props.gameNameInclude) >= 0
+        );
+      }
+      if (props.gameIdInclude) {
+        _gameList = _gameList.filter(
+          (e) => e.gameId.indexOf(props.gameIdInclude) >= 0
         );
       }
       const lastGameIdDtValue =
