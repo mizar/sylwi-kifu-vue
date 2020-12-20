@@ -198,7 +198,7 @@ export default defineComponent({
             p.hideTools ? { tools: "0" } : {},
             p.hideComments ? { comments: "0" } : {},
             p.gameNameInclude ? { name: p.gameNameInclude } : {},
-            p.gameIdInclude ? { name: p.gameIdInclude } : {}
+            p.gameIdInclude ? { id: p.gameIdInclude } : {}
           ),
         });
       },
