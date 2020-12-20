@@ -1732,7 +1732,7 @@ export default defineComponent({
       v: { now: ITimeFormat; total: ITimeFormat }
     ): number => {
       const limit =
-        timeMan.base + timeMan.increment * (Math.max(i - 1, 0) >> 1);
+        timeMan.base + timeMan.increment * (Math.max(i + 1, 0) >> 1);
       const now = 3600 * (v.now.h ?? 0) + 60 * v.now.m + v.now.s;
       const total = 3600 * (v.total.h ?? 0) + 60 * v.total.m + v.total.s;
       return Math.max(limit - total, -now) + timeMan.byoyomi;
@@ -1825,7 +1825,7 @@ export default defineComponent({
           .join("\n")
       ),
       timePar: player.kifu.moves.map((v, i) =>
-        v.time ? remainTimeSec(i, v.time) / timeMan.base : Number.NaN
+        v.time ? remainTimeSec(i, v.time) / Math.max(timeMan.base + timeMan.increment, 60) : Number.NaN
       ),
       textSideB: `☗${player.kifu.header.先手 || player.kifu.header.下手 || ""}${
         remainTimesB.length > 0
