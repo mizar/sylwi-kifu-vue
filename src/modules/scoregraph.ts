@@ -1825,7 +1825,10 @@ export default defineComponent({
           .join("\n")
       ),
       timePar: player.kifu.moves.map((v, i) =>
-        v.time ? remainTimeSec(i, v.time) / Math.max(timeMan.base + timeMan.increment, 60) : Number.NaN
+        v.time
+          ? remainTimeSec(i, v.time) /
+            Math.max(timeMan.base + timeMan.increment, 60)
+          : Number.NaN
       ),
       textSideB: `☗${player.kifu.header.先手 || player.kifu.header.下手 || ""}${
         remainTimesB.length > 0
