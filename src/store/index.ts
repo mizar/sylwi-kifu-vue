@@ -73,16 +73,10 @@ export default createStore({
         ): boolean => {
           return state.csa[`${tournament}/${gameId}`]?.gameEnd ?? false;
         },
-        getPlayer1: (state) => (
-          tournament: string,
-          gameId: string
-        ): string => {
+        getPlayer1: (state) => (tournament: string, gameId: string): string => {
           return state.csa[`${tournament}/${gameId}`]?.p1 ?? "";
         },
-        getPlayer2: (state) => (
-          tournament: string,
-          gameId: string
-        ): string => {
+        getPlayer2: (state) => (tournament: string, gameId: string): string => {
           return state.csa[`${tournament}/${gameId}`]?.p2 ?? "";
         },
       },
@@ -117,13 +111,15 @@ export default createStore({
                 .split("\n")
                 .map((s: string) =>
                   s.match(
-                    /^<div><a href="\.\/kifujs\/((?:[\w.-]+\+){4}\d+)\.html"[^>]*>([^<]+)<\/a>/
+                    /^<div><a href="\.\/kifujs\/((?:[\w.-]+\+){4}\d+)\.html"[^>]*>([^\n]+)<\/a>/
                   )
                 )
                 .filter((s: RegExpMatchArray | null) => s)
                 .map((s: RegExpMatchArray) => ({
                   gameId: (s as string[])[1],
                   gameName: (s as string[])[2]
+                    .replace(/<[^>]+>/g, "")
+                    .replace(/[<>]/g, "")
                     .replace(/▲/g, "☗")
                     .replace(/△/g, "☖"),
                 }))
