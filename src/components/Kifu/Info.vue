@@ -8,6 +8,16 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    head: {
+      type: String,
+      required: false,
+      default: () => `{}`,
+    },
+    foot: {
+      type: String,
+      required: false,
+      default: () => `{}`,
+    },
   },
   setup(props) {
     return {
@@ -34,8 +44,10 @@ export default defineComponent({
       "dl",
       {},
       Object.entries({
+        ...(JSON.parse(this.props.head) as { [key: string]: string }),
         ...player.kifu.header,
         ...timeMan,
+        ...(JSON.parse(this.props.foot) as { [key: string]: string }),
       })
         .filter(([key]) => key !== "棋戦")
         .reduce(

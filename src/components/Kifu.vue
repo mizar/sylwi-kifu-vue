@@ -72,7 +72,16 @@
           <div>
             <div class="inlineblock players">
               <div class="mochi info">
-                <Info :jkf="data.jkfstr" />
+                <Info
+                  :jkf="data.jkfstr"
+                  :head="
+                    JSON.stringify(
+                      data.buoyName
+                        ? { 指定局面: `[${data.buoyName}] ${data.buoyComment}` }
+                        : {}
+                    )
+                  "
+                />
               </div>
               <Mochi
                 :jkf="data.jkfstr"
@@ -508,6 +517,7 @@ export default defineComponent({
       tesuu: 0,
       tesuuMax: 0,
       buoyName: "",
+      buoyComment: "",
       buoyTesuu: 0,
       kifustr: "",
       ply: props.ply,
@@ -599,8 +609,10 @@ export default defineComponent({
     const updateData = () => {
       const tournament = props.tournament;
       const gameId = props.gameid;
-      const buoyName =
-        gameId.match(/^[A-Za-z0-9_-]+\+buoy_([A-Za-z0-9.-]+)/)?.[1] ?? "";
+      const buoyEntry = store.getters["shogiServer/getBuoy"](
+        tournament,
+        gameId.match(/^[A-Za-z0-9_-]+\+buoy_([A-Za-z0-9.-]+)/)?.[1] ?? ""
+      );
       const tesuuMax = store.getters["shogiServer/getTesuuMax"](
         tournament,
         gameId
@@ -611,6 +623,7 @@ export default defineComponent({
         data.inGame,
         data.tesuuMax,
         data.buoyName,
+        data.buoyComment,
         data.buoyTesuu,
         data.jkfstr,
         data.tesuu,
@@ -622,7 +635,8 @@ export default defineComponent({
         "",
         !store.getters["shogiServer/getGameEnd"](tournament, gameId),
         tesuuMax,
-        store.getters["shogiServer/getBuoy"](tournament, buoyName)[1] ?? "",
+        buoyEntry[1] ?? "",
+        buoyEntry[2] ?? "",
         store.getters["shogiServer/getBuoyTesuu"](tournament, gameId),
         store.getters["shogiServer/getJkf"](tournament, gameId),
         Math.max(
