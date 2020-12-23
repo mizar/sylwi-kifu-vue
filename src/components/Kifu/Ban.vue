@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, h } from "vue";
+import { defineComponent, h, SetupContext } from "vue";
 import { JKFPlayer } from "json-kifu-format";
 import { getUrl } from "@/assets/pieces/PieceImage";
 
@@ -18,9 +18,12 @@ export default defineComponent({
       required: true,
     },
   },
-  setup(props) {
+  setup(props, ctx: SetupContext) {
     return {
       props,
+      tesuuDiff: (plydiff: number) => {
+        ctx.emit("tesuu-diff", { plydiff });
+      },
     };
   },
   render() {
@@ -48,7 +51,7 @@ export default defineComponent({
           (!rotated
             ? [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
             : [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-          ).map((f) => {
+          ).map((f, x) => {
             if (r < 1) {
               return h(
                 "div",
@@ -70,6 +73,14 @@ export default defineComponent({
                 className: `square${
                   mv?.from?.x === f && mv?.from?.y === r ? " fromsq" : ""
                 }${mv?.to?.x === f && mv?.to?.y === r ? " tosq" : ""}`,
+                onClick: () => {
+                  if (x < 4) {
+                    this.tesuuDiff(-1);
+                  }
+                  if (x > 4) {
+                    this.tesuuDiff(1);
+                  }
+                },
               },
               h(
                 "div",

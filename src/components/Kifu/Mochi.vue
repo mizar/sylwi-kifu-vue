@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, VNode, h } from "vue";
+import { defineComponent, VNode, h, SetupContext } from "vue";
 import { Piece, Color } from "shogi.js";
 import { JKFPlayer } from "json-kifu-format";
 import { getUrl } from "@/assets/pieces/PieceImage";
@@ -27,9 +27,12 @@ export default defineComponent({
       required: false,
     },
   },
-  setup(props) {
+  setup(props, ctx: SetupContext) {
     return {
       props,
+      tesuuDiff: (plydiff: number) => {
+        ctx.emit("tesuu-diff", { plydiff });
+      },
     };
   },
   render() {
@@ -167,6 +170,9 @@ export default defineComponent({
       "div",
       {
         className: `mochi mochi${this.side}`,
+        onClick: () => {
+          this.tesuuDiff(side === 1 ? -1 : 1);
+        },
       },
       [
         h(

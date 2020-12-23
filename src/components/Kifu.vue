@@ -57,6 +57,7 @@
                 :tesuu="data.tesuu"
                 :rotated="data.rotated"
                 :side="1"
+                @tesuu-diff="tesuuDiff"
               />
               <div class="mochi panel tesuu">
                 <TesuuSel
@@ -68,7 +69,12 @@
               </div>
             </div>
           </div>
-          <Ban :jkf="data.jkfstr" :tesuu="data.tesuu" :rotated="data.rotated" />
+          <Ban
+            :jkf="data.jkfstr"
+            :tesuu="data.tesuu"
+            :rotated="data.rotated"
+            @tesuu-diff="tesuuDiff"
+          />
           <div>
             <div class="inlineblock players">
               <div class="mochi info">
@@ -88,6 +94,7 @@
                 :tesuu="data.tesuu"
                 :rotated="data.rotated"
                 :side="0"
+                @tesuu-diff="tesuuDiff"
               />
             </div>
           </div>
@@ -592,6 +599,9 @@ export default defineComponent({
     const tesuuChange = (msg: { ply: number }) => {
       plyGoto(msg.ply);
     };
+    const tesuuDiff = (msg: { plydiff: number }) => {
+      plyGo(msg.plydiff);
+    };
     const tesuuChangeEvent = (event: Event) => {
       if (
         event.target instanceof HTMLInputElement ||
@@ -813,6 +823,7 @@ export default defineComponent({
       kifuUrlOpenEvent,
       tesuuChange,
       tesuuChangeEvent,
+      tesuuDiff,
       iconCaretLeftRaw,
       iconChevronsLeftRaw,
       iconArrowBarToLeftRaw,
