@@ -46,6 +46,7 @@
       :hideGraph="props.hideGraph"
       :hideTools="props.hideTools"
       :hideComments="props.hideComments"
+      :hideEnd="props.hideEnd"
       :gameNameInclude="props.gameNameInclude"
       :gameIdInclude="props.gameIdInclude"
     />
@@ -99,6 +100,11 @@ export default defineComponent({
       default: () => false,
     },
     hideComments: {
+      type: Boolean,
+      required: false,
+      default: () => false,
+    },
+    hideEnd: {
       type: Boolean,
       required: false,
       default: () => false,

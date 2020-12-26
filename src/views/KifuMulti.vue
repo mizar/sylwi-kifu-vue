@@ -66,6 +66,11 @@
         <button @click="changeQuery({ hideComments: true })">hide</button>
         <button @click="changeQuery({ hideComments: false })">show</button>
       </li>
+      <li>
+        終了したゲーム:
+        <button @click="changeQuery({ hideEnd: true })">hide</button>
+        <button @click="changeQuery({ hideEnd: false })">show</button>
+      </li>
       <li v-if="props.tournament !== 'floodgate'">
         名前条件:
         <button @click="changeQuery({ gameNameInclude: '' })">none</button>
@@ -95,6 +100,7 @@
       :hideGraph="props.hideGraph"
       :hideTools="props.hideTools"
       :hideComments="props.hideComments"
+      :hideEnd="props.hideEnd"
       :gameNameInclude="props.gameNameInclude"
       :gameIdInclude="props.gameIdInclude"
     />
@@ -150,6 +156,11 @@ export default defineComponent({
       required: false,
       default: () => false,
     },
+    hideEnd: {
+      type: Boolean,
+      required: false,
+      default: () => false,
+    },
     gameNameInclude: {
       type: String,
       required: false,
@@ -197,6 +208,7 @@ export default defineComponent({
             p.hideGraph ? { graph: "0" } : {},
             p.hideTools ? { tools: "0" } : {},
             p.hideComments ? { comments: "0" } : {},
+            p.hideEnd ? { end: "0" } : {},
             p.gameNameInclude ? { name: p.gameNameInclude } : {},
             p.gameIdInclude ? { id: p.gameIdInclude } : {}
           ),

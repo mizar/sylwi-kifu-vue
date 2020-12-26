@@ -62,6 +62,11 @@ export default defineComponent({
       required: false,
       default: () => false,
     },
+    hideEnd: {
+      type: Boolean,
+      required: false,
+      default: () => false,
+    },
     gameNameInclude: {
       type: String,
       required: false,
@@ -195,6 +200,7 @@ export default defineComponent({
                 hideGraph: this.props.hideGraph,
                 hideTools: this.props.hideTools,
                 hideComments: this.props.hideComments,
+                hideEnd: this.props.hideEnd,
                 disableNonGame: true,
                 onChangePly: () => undefined,
               }),

@@ -1,7 +1,10 @@
 <template>
   <div
     class="kifu"
-    v-if="!props.disableNonGame || data.tesuuMax > data.buoyTesuu"
+    v-if="
+      (!props.disableNonGame || data.tesuuMax > data.buoyTesuu) &&
+      (!props.hideEnd || data.inGame)
+    "
   >
     <div class="kifuheader">
       <div class="gamename">
@@ -503,6 +506,11 @@ export default defineComponent({
       default: () => false,
     },
     hideComments: {
+      type: Boolean,
+      required: false,
+      default: () => false,
+    },
+    hideEnd: {
       type: Boolean,
       required: false,
       default: () => false,
