@@ -561,7 +561,7 @@ export default defineComponent({
     };
     data.intervalId = window.setInterval(
       loadKifu,
-      props.tournament === "floodgate" ? 5000 : 1000
+      props.tournament === "floodgate" ? 5000 : 2000
     );
     const moveToReadableKifu = (mv: IMoveFormat): string => {
       return JKFPlayer.moveToReadableKifu(mv);
