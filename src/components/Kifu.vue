@@ -3,7 +3,9 @@
     class="kifu"
     v-if="
       (!props.disableNonGame || data.tesuuMax > data.buoyTesuu) &&
-      (!props.hideEnd || data.inGame)
+      (!props.hideEnd ||
+        data.inGame ||
+        new Date().valueOf() < data.lastInGame + 60000)
     "
   >
     <div class="kifuheader">
@@ -544,6 +546,7 @@ export default defineComponent({
       activated: false,
       updated: 0,
       showDiag: false,
+      lastInGame: 0,
       p1: "",
       p2: "",
     });
@@ -635,10 +638,15 @@ export default defineComponent({
         tournament,
         gameId
       );
+      const gameEnd = store.getters["shogiServer/getGameEnd"](
+        tournament,
+        gameId
+      );
       [
         data.kifustr,
         data.error,
         data.inGame,
+        data.lastInGame,
         data.tesuuMax,
         data.buoyName,
         data.buoyComment,
@@ -651,7 +659,8 @@ export default defineComponent({
       ] = [
         store.getters["shogiServer/getRawCsa"](tournament, gameId),
         "",
-        !store.getters["shogiServer/getGameEnd"](tournament, gameId),
+        !gameEnd,
+        gameEnd || tesuuMax === 0 ? data.lastInGame : new Date().valueOf(),
         tesuuMax,
         buoyEntry[1] ?? "",
         buoyEntry[2] ?? "",
